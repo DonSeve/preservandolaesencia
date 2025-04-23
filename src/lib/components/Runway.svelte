@@ -11,7 +11,6 @@
 
 	function toggleMirror() {
 		visible.frameBack = !visible.frameBack;
-		console.log('frameBack: ', visible.frameBack);
 	}
 </script>
 
@@ -60,6 +59,21 @@
 					{#if item.garrocha}
 						<img
 							src={`/img/runway/${options.portador}/garrocha/${item.garrocha}`}
+							alt={item.variante}
+							style:z-index={item.zindex}
+							draggable="false"
+						/>
+					{/if}
+				{/each}
+			</div>
+		{/if}
+
+		{#if visible.frameCabeza}
+			<div class="frame-cabeza">
+				{#each outfit[options.portador] as item}
+					{#if item.cabeza}
+						<img
+							src={`/img/runway/${options.portador}/cabeza/${item.cabeza}`}
 							alt={item.variante}
 							style:z-index={item.zindex}
 							draggable="false"
@@ -153,21 +167,31 @@
 			background-image: url('/img/base-caballo.avif');
 		}
 
-		.frame-garrocha {
+		.frame-garrocha,
+		.frame-cabeza {
 			position: absolute;
-			top: 1em;
-			right: 5%;
-			width: 30%;
 			height: auto;
-			aspect-ratio: 503 / 878;
+			width: 30%;
 			background-color: var(--color-runway);
-			background-image: url('/img/base-garrocha.avif');
 			background-position: center;
 			background-size: contain;
 			background-repeat: no-repeat;
 			border: solid var(--color-buttons) thin;
 			border-radius: var(--border-radius-light);
 			z-index: 100;
+			aspect-ratio: 503 / 878;
+		}
+
+		.frame-garrocha {
+			top: 1em;
+			right: 5%;
+			background-image: url('/img/base-garrocha.avif');
+		}
+
+		.frame-cabeza {
+			top: 1em;
+			right: 5%;
+			background-image: url('/img/base-cabeza.avif');
 		}
 	}
 

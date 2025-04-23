@@ -2,7 +2,8 @@ export let visible = $state({
   menu: false,
   productMenu: false,
   frameBack: false,
-  frameGarrocha: false
+  frameGarrocha: false,
+  frameCabeza: false,
 })
 
 export const options = $state({

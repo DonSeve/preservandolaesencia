@@ -1,14 +1,15 @@
 export const products = [
   // DESCRIPCIÓN DE CAMPOS:
-  // variante: nombre interno, para uso <Menu/> y script de productos
+  // variante: nombre interno, para uso <Menu/> y script de productLogic
   // nombrecompleto: opcional para mostrar en <InfoCol/> (ej: 'sombrero de paja', no 'A1C1')
   // cat: categoría
   // subcat: subcategoría
   // etiqueta: lista de nivel de etiqueta del producto, <Etiquette/>
   // portador: jinete o caballo, <Portador/>
   // runway: nombre de archivo para imágen principal, <Runway/>, static/img/runway/jinete o static/img/runway/caballo
-  // garrocha: nombre de archivo para imágen lado garrocha, static/img/runway/caballo/garrocha
-  // back: nombre de archivo para imágen de espejo (jinete), static/img/runway/jinete/back
+  // back: nombre de archivo para imagen de espejo (jinete), static/img/runway/jinete/back
+  // cabeza: nombre de archivo para imagen de cabeza (caballo), static/img/runway/caballo/cabeza
+  // garrocha: nombre de archivo para imagen lado garrocha (caballo), static/img/runway/caballo/garrocha
   // preview: imagen para menú de sombreros, <Preview/>
   // replacecat: lista de subcategorías donde el nuevo producto reemplaza uno existente
   // extraimg: objeto para cuando un producto es multi-imagen (nombre de imagen extra con su propio z-index)
@@ -5271,11 +5272,12 @@ export const products = [
     etiqueta: ['faena', 'media gala', 'gala', 'gran gala'],
     portador: 'caballo',
     runway: 'freno-normal.avif',
+    cabeza: 'freno.avif',
     zindex: 31,
     text: [
       'Hay muchísimos tipos de frenos, tanto en las dimensiones de cada parte, como su material, estilos, adornos, etc. Aquí solo pongo algunos representativos. El freno debe de estar pensado en el caballo que lo usará, tanto en dimensiones, forma y materiales. Creer que todos los caballos usarán el mismo freno es un error. El freno, idealmente debe hacer juego en su parte visible con el resto del herraje. El freno mexicano tiene muchísimas variantes y estilos, y no hace falta copiar los frenos gringos.'
     ],
-    descImg: ['partes-freno.jpg']
+    descImg: ['partes-freno.jpg'],
   },
   {
     variante: 'freno zacatecano',
@@ -5284,6 +5286,7 @@ export const products = [
     etiqueta: ['faena', 'media gala', 'gala', 'gran gala'],
     portador: 'caballo',
     runway: 'freno-zacatecano.avif',
+    cabeza: 'freno.avif',
     zindex: 31,
     modify: ['cabezadas normales'],
     text: [
@@ -5300,6 +5303,7 @@ export const products = [
     etiqueta: ['faena', 'media gala', 'gala', 'gran gala'],
     portador: 'caballo',
     runway: 'freno-ruedas.avif',
+    cabeza: 'freno.avif',
     zindex: 31,
     text: [
       'Hay muchísimos tipos de frenos, tanto en las dimensiones de cada parte, como su material, estilos, adornos, etc. Aquí solo pongo algunos representativos. El freno debe de estar pensado en el caballo que lo usará, tanto en dimensiones, forma y materiales. Creer que todos los caballos usarán el mismo freno es un error. El freno, idealmente debe hacer juego en su parte visible con el resto del herraje. El freno mexicano tiene muchísimas variantes y estilos, y no hace falta copiar los frenos gringos.',
@@ -5314,6 +5318,7 @@ export const products = [
     etiqueta: ['gala', 'gran gala'],
     portador: 'caballo',
     runway: 'freno-gala.avif',
+    cabeza: 'freno.avif',
     zindex: 31,
     text: [
       'Hay muchísimos tipos de frenos, tanto en las dimensiones de cada parte, como su material, estilos, adornos, etc. Aquí solo pongo algunos representativos. El freno debe de estar pensado en el caballo que lo usará, tanto en dimensiones, forma y materiales. Creer que todos los caballos usarán el mismo freno es un error. El freno, idealmente debe hacer juego en su parte visible con el resto del herraje. El freno mexicano tiene muchísimas variantes y estilos, y no hace falta copiar los frenos gringos.',
@@ -5331,6 +5336,7 @@ export const products = [
     etiqueta: ['faena', 'media gala', 'gala', 'gran gala'],
     portador: 'caballo',
     runway: 'cabezadas-normales.avif',
+    cabeza: 'cabezada.avif',
     zindex: 32,
     version: {
       'freno zacatecano': 'cabezadas-normales-zacatecano.avif'
@@ -5348,6 +5354,7 @@ export const products = [
     etiqueta: ['gala', 'gran gala'],
     portador: 'caballo',
     runway: 'cabezadas-cadenilla.avif',
+    cabeza: 'cabezada.avif',
     zindex: 32,
     text: [
       'La cabezada charra tiene por lo general una sola hebilla para ajustarlo y va del lado de montar. Esto es suficiente cuando se va a usar en caballos con cabezas de tamaño similar, pero en los casos donde esto no aplica, puede llevar hebillas de los dos lados, así la orejera quedará bien en su lugar. La orejera no debe de ser de esas tipo gringo que van como con pasadores que se pueden recorrer hasta cualquier parte, porque no cumplen con la función de impedir que la cabezada se mueva excesivamente para atrás. No hay que abusar en los botones de cuero crudo como adorno, porque estos pueden rozar al caballo.',
@@ -5363,6 +5370,7 @@ export const products = [
     etiqueta: ['faena', 'media gala'],
     portador: 'caballo',
     runway: 'cabezadas-orejera.avif',
+    cabeza: 'cabezadadividida.avif',
     zindex: 32,
     text: [
       'La cabezada charra tiene por lo general una sola hebilla para ajustarlo y va del lado de montar. Esto es suficiente cuando se va a usar en caballos con cabezas de tamaño similar, pero en los casos donde esto no aplica, puede llevar hebillas de los dos lados, así la orejera quedará bien en su lugar. La orejera no debe de ser de esas tipo gringo que van como con pasadores que se pueden recorrer hasta cualquier parte, porque no cumplen con la función de impedir que la cabezada se mueva excesivamente para atrás. No hay que abusar en los botones de cuero crudo como adorno, porque estos pueden rozar al caballo.',
@@ -5378,6 +5386,7 @@ export const products = [
     etiqueta: ['gala', 'gran gala'],
     portador: 'caballo',
     runway: 'cabezadas-gala.avif',
+    cabeza: 'cabezada.avif',
     zindex: 32,
     text: [
       'La cabezada charra tiene por lo general una sola hebilla para ajustarlo y va del lado de montar. Esto es suficiente cuando se va a usar en caballos con cabezas de tamaño similar, pero en los casos donde esto no aplica, puede llevar hebillas de los dos lados, así la orejera quedará bien en su lugar. La orejera no debe de ser de esas tipo gringo que van como con pasadores que se pueden recorrer hasta cualquier parte, porque no cumplen con la función de impedir que la cabezada se mueva excesivamente para atrás. No hay que abusar en los botones de cuero crudo como adorno, porque estos pueden rozar al caballo.',

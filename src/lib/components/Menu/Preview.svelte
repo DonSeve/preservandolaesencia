@@ -52,20 +52,47 @@
 </script>
 
 <button class="preview--item" aria-label={product.variante} onclick={handleProduct}>
-	<img src={`/img/runway/${options.portador}/${product.preview}`} alt={product.variante} />
+	<img
+		src={`/img/runway/${options.portador}/${product.preview}`}
+		alt={product.variante}
+		draggable="false"
+	/>
+	{#if outfitted}
+		<div class="check">
+			<img src="/img/icons/check.svg" alt="Check" />
+		</div>
+	{/if}
 </button>
 
 <style>
 	.preview--item {
+		position: relative;
 		background-color: var(--color-text);
 		border-radius: var(--border-radius-light);
 		width: 100%;
 		aspect-ratio: 1/1;
-		position: relative;
 
 		img {
 			width: 100%;
 			object-fit: contain;
+		}
+
+		.check {
+			position: absolute;
+			bottom: 0.5em;
+			left: 0.5em;
+			--height: 1.5em;
+			border-radius: 50%;
+			background-color: var(--color-menu);
+			padding: 4px;
+			height: var(--height);
+			width: var(--height);
+
+			img {
+				object-fit: contain;
+				height: 100%;
+				width: 100%;
+			}
 		}
 	}
 

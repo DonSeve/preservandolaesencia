@@ -58,7 +58,7 @@
 		<p class="product--name">{product.variante}</p>
 		{#if outfitted}
 			<div class="check">
-				<img src="/img/icons/check.svg" alt="Check" />
+				<img src="/img/icons/check_alt.svg" alt="Check" />
 			</div>
 		{/if}
 	</div>
@@ -74,7 +74,6 @@
 
 <style>
 	.product {
-		--height: 2em;
 		position: relative;
 		width: 100%;
 		padding: 0.5em 0;
@@ -98,13 +97,13 @@
 
 	.product--name {
 		text-align: left;
-		/* border: solid red thin; */
 	}
 
 	.check {
+		--height: 1.5em;
 		border-radius: 50%;
-		background-color: #ffffff;
-		padding: 5px;
+		background-color: var(--color-buttons);
+		padding: 4px;
 		height: var(--height);
 		width: var(--height);
 

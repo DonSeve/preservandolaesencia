@@ -80,7 +80,7 @@ export function wearProduct(product) {
       current[options.portador] = clone // para InfoCol
     }
     outfit[options.portador].push(clone);
-    if (options.barbuquejo) {
+    if (options.barbuquejo && options.portador === 'jinete' && clone.subcat && (clone.subcat == 'sombrero de palma' || clone.subcat === 'sombrero de fieltro' || clone.subcat === 'estilos antiguos')) {
       const barbuquejo = products.find((product) => product.variante == 'barbuquejo');
       outfit[options.portador].push(barbuquejo)
 
@@ -106,6 +106,12 @@ export function wearProduct(product) {
     visible.frameGarrocha = true
   } else {
     visible.frameGarrocha = false
+  }
+
+  if (product.cabeza) {
+    visible.frameCabeza = true
+  } else {
+    visible.frameCabeza = false
   }
   // console.log('products.length: ', products.length)
 }
@@ -139,6 +145,7 @@ export function removeProduct(product) {
 
   if (product.back) { visible.frameBack = false }
   if (product.garrocha) { visible.frameGarrocha = false }
+  if (product.cabeza) { visible.frameCabeza = false }
 
   // quitar producto
   outfit[options.portador] = outfit[options.portador].filter(
