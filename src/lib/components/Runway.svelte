@@ -1,11 +1,12 @@
 <script>
 	import RunwayBtn from '$lib/components/RunwayBtn.svelte';
 	import { visible, outfit, options, current } from '$lib/stores/shared.svelte';
+	import { tick } from 'svelte';
 	import { fly } from 'svelte/transition';
 
 	function resetOutfit() {
 		outfit[options.portador] = [];
-		current.item = {};
+		current[options.portador] = {};
 	}
 
 	function toggleMirror() {
