@@ -1,4 +1,29 @@
 export const products = [
+  // DESCRIPCIÓN DE CAMPOS:
+  // variante: nombre interno, para uso <Menu/> y script de productos
+  // nombrecompleto: opcional para mostrar en <InfoCol/> (ej: 'sombrero de paja', no 'A1C1')
+  // cat: categoría
+  // subcat: subcategoría
+  // etiqueta: lista de nivel de etiqueta del producto, <Etiquette/>
+  // portador: jinete o caballo, <Portador/>
+  // runway: nombre de archivo para imágen principal, <Runway/>, static/img/runway/jinete o static/img/runway/caballo
+  // garrocha: nombre de archivo para imágen lado garrocha, static/img/runway/caballo/garrocha
+  // back: nombre de archivo para imágen de espejo (jinete), static/img/runway/jinete/back
+  // preview: imagen para menú de sombreros, <Preview/>
+  // replacecat: lista de subcategorías donde el nuevo producto reemplaza uno existente
+  // extraimg: objeto para cuando un producto es multi-imagen (nombre de imagen extra con su propio z-index)
+  // modify: lista de productos cuya imagen cambia en presencia de éste
+  // dependencies: lista de productos que deben desaparecer junto con éste
+  // zindex: z-index de runway
+  // version: objeto con imágenes a usar por nuevo producto en presencia de otros (variante: archivo de imagen)
+  // text: lista de parrafos para usar en <InfoCol/>
+  // descImg: lista de imagenes para usar en <InfoCol/>
+  // descLink: links para usar en <InfoCol/>
+  // restricted: lista de productos (variante) cuya presencia impide agregar el producto
+  // restrictedMessage: texto mostrado cuando un producto está restringido
+  // restrictSubcat: lista de subcategorias restringidas por el producto
+  // require: lista de productos (variante) cuya presencia es requerida para agregar el producto
+  // requireMessage: texto mostrado cuando un producto necesita cumplir un requerimiento
   // *****************************************
   // *****************************************
   // SOMBREROS
