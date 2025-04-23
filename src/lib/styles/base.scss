@@ -1,0 +1,36 @@
+body {
+	font-size: 14px;
+	background-color: var(--color-page-bg);
+	color: var(--color-text);
+	font-family: var(--font-body);
+}
+
+body.noscroll {
+	height: 100vh;
+	overflow: hidden;
+}
+
+.container {
+	// padding: 0 var(--container-padding);
+	height: 100%;
+	margin: 0 auto;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-text);
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	color: var(--color-text);
+	font-family: var(--font-body);
+	font-size: 1em;
+	outline: none;
+	cursor: pointer;
+}

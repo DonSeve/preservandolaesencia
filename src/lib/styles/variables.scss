@@ -1,0 +1,59 @@
+:root {
+	--layout-spacing: 2em;
+	--container-padding: 1rem;
+	--nav-height: 54px;
+
+	// Colors
+	--color-page-bg: #f6f6f6;
+	--color-page-bg: #a8a6a1;
+	--color-page-bg: #a6a19c;
+	--color-page-bg: #bab3ab;
+	--color-page-bg: #7a7775;
+	--color-page-bg: #e4e4e4;
+	// --color-text: #212121;
+	--color-text: #0e0e0e;
+	// --color-text: #202020;
+	--color-buttons: #202020;
+	// --color-runway: #2e2e2e;
+	--color-runway: #ffffff;
+	--color-runway: #202020;
+	--color-runway: #e4e4e4;
+	--color-runway: #f6f6f6;
+
+	--color-menu: #a7a7a7;
+	--color-menu: #dfd5ca;
+	--color-menu: #e4e4e4;
+	--color-menu: #f6f6f6;
+
+	// Fonts
+	--font-special: 'Castoro Titling', serif;
+	--font-retro: 'Literata', serif;
+	--font-body: 'Be Vietnam Pro', sans-serif;
+	--font-body: 'Kumbh Sans', sans-serif;
+	// Misc
+	--menu-btn-size: 4em;
+	--border-radius-light: 8px;
+	// Layout
+}
+
+@media screen and (min-width: 768px) {
+	:root {
+		--container-padding: 2rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	:root {
+		--layout-spacing: 2em;
+		--container-padding: 2rem;
+		--menu-btn-size: 4em;
+		// --nav-height: 2.5em;
+		// --nav-height: auto;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	:root {
+		--container-padding: 3rem;
+	}
+}
