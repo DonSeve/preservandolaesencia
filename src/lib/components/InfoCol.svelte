@@ -78,6 +78,10 @@
 
 			.title {
 				margin-top: 0;
+
+				&::first-letter {
+					text-transform: uppercase;
+				}
 			}
 
 			.inner {

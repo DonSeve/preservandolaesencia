@@ -158,15 +158,16 @@
 		display: flex;
 		align-items: center;
 		width: 100%;
-		padding: 1em 0;
+		padding: 2em 0;
 		gap: 2em;
 		border-bottom: solid var(--color-text) 1px;
 
 		&--title {
-			font-size: 1.25em;
+			font-size: 1.5em;
 			font-weight: 700;
 			text-transform: uppercase;
 			letter-spacing: 1px;
+			text-align: left;
 		}
 
 		&--back {

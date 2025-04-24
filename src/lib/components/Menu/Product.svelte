@@ -72,7 +72,7 @@
 	{/if}
 </button>
 
-<style>
+<style lang="scss">
 	.product {
 		position: relative;
 		width: 100%;
@@ -97,6 +97,7 @@
 
 	.product--name {
 		text-align: left;
+		font-size: 1.125em;
 	}
 
 	.check {
@@ -119,5 +120,13 @@
 		font-size: 0.7em;
 		/* height: 1em; */
 		text-align: left;
+	}
+
+	@media screen and (min-width: 768px) {
+		.product {
+			&--name {
+				font-size: 1em;
+			}
+		}
 	}
 </style>

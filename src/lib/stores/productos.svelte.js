@@ -706,8 +706,8 @@ export const products = [
     ]
   },
   {
-    variante: 'pano lomo',
-    nombrecompleto: 'toquilla de pano lomo',
+    variante: 'paño lomo',
+    nombrecompleto: 'toquilla de paño lomo',
     cat: 'sombreros',
     subcat: 'toquillas',
     etiqueta: ['faena', 'media gala', 'gala', 'gran gala', 'ceremonia'],
@@ -720,8 +720,8 @@ export const products = [
     ]
   },
   {
-    variante: 'pano recto',
-    nombrecompleto: 'toquilla de pano recto',
+    variante: 'paño recto',
+    nombrecompleto: 'toquilla de paño recto',
     cat: 'sombreros',
     subcat: 'toquillas',
     etiqueta: ['faena', 'media gala', 'gala', 'gran gala', 'ceremonia'],
@@ -1006,6 +1006,10 @@ export const products = [
     etiqueta: ['faena'],
     portador: 'jinete',
     runway: 'sombrero-cocula.avif',
+    extraimg: {
+      archivo: 'sombrero-barbuquejo-sin.avif',
+      zindex: 24
+    },
     replacecat: ['sombrero de palma', 'sombrero de fieltro', 'ribetes', 'toquillas', 'chapetas'],
     dependencies: ['barbuquejo'],
     zindex: 33,
@@ -1018,6 +1022,10 @@ export const products = [
     etiqueta: ['faena', 'media gala', 'gala'],
     portador: 'jinete',
     runway: 'sombrero-zapata.avif',
+    extraimg: {
+      archivo: 'sombrero-barbuquejo-sin.avif',
+      zindex: 24
+    },
     replacecat: ['sombrero de palma', 'sombrero de fieltro', 'ribetes', 'toquillas', 'chapetas'],
     dependencies: ['barbuquejo'],
     zindex: 33
@@ -1030,6 +1038,10 @@ export const products = [
     etiqueta: ['faena', 'media gala', 'gala', 'gran gala', 'ceremonia'],
     portador: 'jinete',
     runway: 'sombrero-alfaro.avif',
+    extraimg: {
+      archivo: 'sombrero-barbuquejo-sin.avif',
+      zindex: 24
+    },
     replacecat: ['sombrero de palma', 'sombrero de fieltro', 'ribetes', 'toquillas', 'chapetas'],
     dependencies: ['barbuquejo'],
     zindex: 33
@@ -1042,12 +1054,16 @@ export const products = [
     etiqueta: ['faena', 'media gala', 'gala', 'gran gala', 'ceremonia'],
     portador: 'jinete',
     runway: 'sombrero-poblano.avif',
+    extraimg: {
+      archivo: 'sombrero-barbuquejo-sin.avif',
+      zindex: 24
+    },
     replacecat: [
       'sombrero de palma',
-      'sombrero de fieltro'
-      // 'ribetes',
-      // 'toquillas',
-      // 'chapetas',
+      'sombrero de fieltro',
+      'ribetes',
+      'toquillas',
+      'chapetas',
     ],
     dependencies: ['barbuquejo'],
     zindex: 33
@@ -1910,6 +1926,7 @@ export const products = [
     etiqueta: ['faena', 'media gala', 'gala', 'gran gala'],
     portador: 'jinete',
     runway: 'lluvia-manga_hule.avif',
+    replacecat: ['prendas de abrigo'],
     zindex: 24,
     text: [
       'Las mangas de hule son como jorongos amplios de manta impregnados de hule por el lado exterior, y sirven para protegerse de la lluvia. Cuando no se usan se lleva enrollado como sarape atrás de la teja, o dentro de un maletín o portamangas. Si se llevan dos mangas, una se puede embrocar en la cabeza de la silla para que supla a las armas de agua.'
@@ -2229,7 +2246,7 @@ export const products = [
   },
   {
     variante: 'pachuqueña cuello militar',
-    variante: 'camisa pachuqueña de cuello militar',
+    nombrecompleto: 'camisa pachuqueña de cuello militar',
     cat: 'traje',
     subcat: 'camisas',
     etiqueta: ['faena'],
@@ -2813,6 +2830,8 @@ export const products = [
       archivo: 'abrigo-ruana2.avif',
       zindex: 22
     },
+    restricted: ['manga de hule'],
+    restrictedmessage: 'No se puede usar junto con una manga de hule',
     zindex: 1,
     text: [
       'La ruana charra es originalmente una prenda masculina, aunque ahora la usen las adelitas y charras. Lo ideal es que se usen en temporadas de frio cuando el chaleco (opcional) y la chaquetilla no es suficiente. Es una prenda más elegante y formal que el sarape o jorongo. Se sujetan con un broche en el cuello, y la orilla suele llevar flecos.'
@@ -2825,6 +2844,8 @@ export const products = [
     etiqueta: ['faena', 'media gala', 'gala', 'gran gala', 'ceremonia'],
     portador: 'jinete',
     runway: 'abrigo-sarape.avif',
+    restricted: ['manga de hule'],
+    restrictedmessage: 'No se puede usar junto con una manga de hule',
     zindex: 22,
     text: [
       'Debe ser de medidas reales para poderse usar en caso de frio, y no ser de esos que solo son de utilería. No es soporte publicitario ni playera deportiva para poner el nombre de jugador. Los colores deben ser serios y hacer juego con el resto de los textiles del ajuar. Los flecos caen de lado de montar en el caso de las sillas en las que se monta a horcajada y del lado de la garrocha en las albardas. Se sujetan con los tientos saraperos. Hay muchas maneras de portarlos a pie y a caballo. Cuando se llevan a pie y no se usa para abrigarse, se suele llevar doblado longitudinalmente y sobre el hombro izquierdo (para tener la mano derecha libre).',
@@ -2840,6 +2861,8 @@ export const products = [
     portador: 'jinete',
     runway: 'abrigo-jorongo.avif',
     zindex: 22,
+    restricted: ['manga de hule'],
+    restrictedmessage: 'No se puede usar junto con una manga de hule',
     text: [
       'Debe ser de medidas reales para poderse usar en caso de frio, y no ser de esos que solo son de utilería. No es soporte publicitario ni playera deportiva para poner el nombre de jugador. Los colores deben ser serios y hacer juego con el resto de los textiles del ajuar. Los flecos caen de lado de montar en el caso de las sillas en las que se monta a horcajada y del lado de la garrocha en las albardas. Se sujetan con los tientos saraperos. Hay muchas maneras de portarlos a pie y a caballo. Cuando se llevan a pie y no se usa para abrigarse, se suele llevar doblado longitudinalmente y sobre el hombro izquierdo (para tener la mano derecha libre).',
       'La diferencia entre sarape y jorongo es que este último tiene en medio una abertura o bocamanga por donde se pasa la cabeza cuando se usa.'
@@ -3053,6 +3076,8 @@ export const products = [
       cuchillo: 'proteccioneslazar-cuadrilera-cuchillo.avif'
     },
     restrictsubcat: ['chaparreras'],
+    restricted: ['chaparreras de tientos', 'chaparreras de tientos con rozaderas cortas', 'chaparreras de cinturón atrás', 'chaparreras de cinturón atrás con rozaderas cortas'],
+    restrictedmessage: 'No se usa con chaparreras',
     zindex: 13,
     text: [
       'Pueden usarse para lazar a caballo (pierna derecha) o a pie (parte trasera de la pierna izquierda). Lo ideal es que lleve cuatro tientos para que fijarla en la cadera y pierna y que no se mueva. Cuando no se usa, se lleva en el asiento de la montura sujeta de las argollas del enreatado.'
@@ -3768,6 +3793,8 @@ export const products = [
     portador: 'caballo',
     runway: 'fustes-tipo-conhombros.avif',
     zindex: 4,
+    restricted: ['separado', 'de chorizo'],
+    restrictedmessage: 'No compatible con enreatados de chorizo o separados',
     text: [
       'Los fustes son, por decirlo de una manera, el esqueleto de una montura es el elemento principal al que todas las demás piezas se ajustarán para formar la silla de montar. Son de maderas y suelen estar cubiertos de manta y retobo, aunque también hay los que solo están barnizados, llamados “maqueados”. Suelen llevar troneras (aberturas) en la teja para diferentes usos, como sujetarse si el caballo repara, para amarrar cosas, para que alguien en ancas se sujete, etc. Algunos fustes no las llevan, como algunos fustes de gran gala que llevan la orilla de la teja plateada y muy fina.',
       'En las tablas o barras del fuste llevan una muesca para sujetar la arción, llamada arcionera. Antiguamente algunos fustes lo llevaban a modo de orificio longitudinal en la misma tabla o barra.',
@@ -4302,6 +4329,8 @@ export const products = [
     etiqueta: ['gala', 'gran gala'],
     portador: 'caballo',
     runway: 'enreatados-chorizo.avif',
+    restricted: ['con hombros'],
+    restrictedmessage: 'No compatible con fuste con hombros',
     zindex: 13,
     text: [
       'Los enreatados son dos piezas de cuero que dando la vuelta a la horqueta del fuste se sujetan con dos chapetones a sendas argollas de cada lado de la montura. De esta argolla también se sujetarán los contraenreatados, y el látigo y contralátigo respectivamente, que en conjunto mantienen el fuste en su lugar y sujetan la silla al caballo con ayuda del cincho. Pueden ir adornadas según el cueraje o ser de pial doblado longitudinalmente.',
@@ -4350,6 +4379,8 @@ export const products = [
     etiqueta: ['faena', 'media gala', 'gala', 'gran gala'],
     portador: 'caballo',
     runway: 'enreatados-separado.avif',
+    restricted: ['con hombros'],
+    restrictedmessage: 'No compatible con fuste con hombros',
     zindex: 13,
     text: [
       'Los enreatados son dos piezas de cuero que dando la vuelta a la horqueta del fuste se sujetan con dos chapetones a sendas argollas de cada lado de la montura. De esta argolla también se sujetarán los contraenreatados, y el látigo y contralátigo respectivamente, que en conjunto mantienen el fuste en su lugar y sujetan la silla al caballo con ayuda del cincho. Pueden ir adornadas según el cueraje o ser de pial doblado longitudinalmente.',
@@ -4459,7 +4490,7 @@ export const products = [
     descImg: ['contrareatas-normalesconhebilla.avif']
   },
   {
-    variante: 'de chorizo',
+    variante: 'contraenreatado de chorizo',
     nombrecompleto: 'contraenreatado de chorizo',
     cat: 'cueraje',
     subcat: 'contraenreatados',
@@ -5011,7 +5042,7 @@ export const products = [
     zindex: 19,
     text: [
       'Similar a los pechopretales en su función, pero no se sujetan de las argollas de los enreatados ni tienen la misma forma y estructura.',
-      'Lo más bonito y tradicional en desfiles y eventos especiales es no usarlo, así el caballo luce el tres anterior, sobre todo en caballos sin problemas de conformación.',
+      'Lo más bonito y tradicional en desfiles y eventos especiales es no usarlo, así el caballo luce el tren anterior, sobre todo en caballos sin problemas de conformación.',
       'Las zonas que se suelen adornar son las siguientes: (en verde las principales y en azul las secundarias. Por ejemplo, en las principales suelen estar los bordados y en las secundarias los repujados, pero esto no es una regla.)'
     ],
     descImg: ['pechera.avif']
@@ -5026,7 +5057,7 @@ export const products = [
     zindex: 19,
     text: [
       'Pueden ser de cuero o tejidos. Se sujetan a las argollas de los enreatados y sirven para impedir que la silla se recorra hacia atrás en caballos desbarrigados, en cuestas muy pronunciadas, al colear o jalar a cabeza de silla. Pueden ir forrados de borrega para caballos con piel sensible.',
-      'Lo más bonito y tradicional en desfiles y eventos especiales es no usarlo, así el caballo luce el tres anterior, sobre todo en caballos sin problemas de conformación.',
+      'Lo más bonito y tradicional en desfiles y eventos especiales es no usarlo, así el caballo luce el tren anterior, sobre todo en caballos sin problemas de conformación.',
       'Las zonas que se suelen adornar son las siguientes: (en verde las principales y en azul las secundarias. Por ejemplo, en las principales suelen estar los bordados y en las secundarias los repujados, pero esto no es una regla.)'
     ],
     descImg: ['pechopretal-normal.avif'],
@@ -5042,7 +5073,7 @@ export const products = [
     zindex: 19,
     text: [
       'Pueden ser de cuero o tejidos. Se sujetan a las argollas de los enreatados y sirven para impedir que la silla se recorra hacia atrás en caballos desbarrigados, en cuestas muy pronunciadas, al colear o jalar a cabeza de silla. Pueden ir forrados de borrega para caballos con piel sensible.',
-      'Lo más bonito y tradicional en desfiles y eventos especiales es no usarlo, así el caballo luce el tres anterior, sobre todo en caballos sin problemas de conformación.',
+      'Lo más bonito y tradicional en desfiles y eventos especiales es no usarlo, así el caballo luce el tren anterior, sobre todo en caballos sin problemas de conformación.',
       'Las zonas que se suelen adornar son las siguientes: (en verde las principales y en azul las secundarias. Por ejemplo, en las principales suelen estar los bordados y en las secundarias los repujados, pero esto no es una regla.)'
     ],
     descImg: ['pechopretal-normal.avif'],
@@ -5058,7 +5089,7 @@ export const products = [
     zindex: 19,
     text: [
       'Pueden ser de cuero o tejidos. Se sujetan a las argollas de los enreatados y sirven para impedir que la silla se recorra hacia atrás en caballos desbarrigados, en cuestas muy pronunciadas, al colear o jalar a cabeza de silla. Pueden ir forrados de borrega para caballos con piel sensible.',
-      'Lo más bonito y tradicional en desfiles y eventos especiales es no usarlo, así el caballo luce el tres anterior, sobre todo en caballos sin problemas de conformación.',
+      'Lo más bonito y tradicional en desfiles y eventos especiales es no usarlo, así el caballo luce el tren anterior, sobre todo en caballos sin problemas de conformación.',
       'Las zonas que se suelen adornar son las siguientes: (en verde las principales y en azul las secundarias. Por ejemplo, en las principales suelen estar los bordados y en las secundarias los repujados, pero esto no es una regla.)'
     ],
     descImg: ['pechopretal-forrado.avif'],
@@ -5074,7 +5105,7 @@ export const products = [
     zindex: 19,
     text: [
       'Los gargantones de cuero tienen la misma función que las pecheras y pechopretales.',
-      'Lo más bonito y tradicional en desfiles y eventos especiales es no usarlo, así el caballo luce el tres anterior, sobre todo en caballos sin problemas de conformación.',
+      'Lo más bonito y tradicional en desfiles y eventos especiales es no usarlo, así el caballo luce el tren anterior, sobre todo en caballos sin problemas de conformación.',
       'Las zonas que se suelen adornar son las siguientes: (en verde las principales y en azul las secundarias. Por ejemplo, en las principales suelen estar los bordados y en las secundarias los repujados, pero esto no es una regla.)'
     ],
     descImg: ['garganton-cuero.avif']
@@ -5562,7 +5593,14 @@ export const products = [
     text: [
       'Se llama equivocadamente Falsa Rienda al conjunto que forma la jáquima con bozal (normalmente de cuero crudo) y el ronzal de crin de caballo que anudado formara a la vez la falsa rienda y el ronzal para conducirlo a pie. El proceso entero de arrendamiento cuenta con tres etapas principales: Solo falsa rienda, Falsa rienda con freno, y rienda limpia.',
       'En la segunda etapa, hay esta fase donde solo se le cuelga el freno sin cabestrillos para que el caballo aprenda a portarlo y se acostumbre a llevarlo en la boca sin que este accione ni le de ninguna señal por el momento.'
-    ]
+    ],
+    restrictsubcat: [
+      'frenos',
+      'cabezadas',
+      'riendas',
+      'bozal y bozalillo',
+      'ronzales y gargantones'
+    ],
   },
   {
     variante: 'falsarienda con freno y riendas',
@@ -5573,6 +5611,13 @@ export const products = [
     runway: 'amansar-falsarienda-frenoyriendas.avif',
     replacecat: ['arreos de cabeza'],
     zindex: 36,
+    restrictsubcat: [
+      'frenos',
+      'cabezadas',
+      'riendas',
+      'bozal y bozalillo',
+      'ronzales y gargantones'
+    ],
     text: [
       'Se llama equivocadamente Falsa Rienda al conjunto que forma la jáquima con bozal (normalmente de cuero crudo) y el ronzal de crin de caballo que anudado formara a la vez la falsa rienda y el ronzal para conducirlo a pie. El proceso entero de arrendamiento cuenta con tres etapas principales: Solo falsa rienda, Falsa rienda con freno, y rienda limpia.',
       'En la segunda etapa cuando se le ponen las riendas (sin la gaza y botón), la rienda del freno se enreda en la falsa rienda y se va ajustando a medida que se va haciendo una transición entre las ordenes, primero solo acciona la falsa, luego falsa y rienda al mismo tiempo, y a final solo la del freno, hasta que la falsa termina por quitarse o llevarse solo por si acaso (en esta etapa el bozal y falsa pueden reducirse de grosor), hasta que queda de Rienda Limpia. Este proceso puede durar varios meses.'
