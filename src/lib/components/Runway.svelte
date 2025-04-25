@@ -1,21 +1,34 @@
 <script>
+	import html2canvas from 'html2canvas';
 	import RunwayBtn from '$lib/components/RunwayBtn.svelte';
 	import { visible, outfit, options, current } from '$lib/stores/shared.svelte';
-	import { tick } from 'svelte';
 	import { fly } from 'svelte/transition';
+
+	let screenshotTarget;
 
 	function resetOutfit() {
 		outfit[options.portador][options.etiquette] = [];
-		current[options.portador][options.etiquette] = {};
+		current[options.portador] = {};
 	}
 
 	function toggleMirror() {
 		visible.frameBack = !visible.frameBack;
 	}
+
+	async function screenShot() {
+		console.log('screen shot: ', screenshotTarget);
+		const canvas = await html2canvas(screenshotTarget);
+		const image = canvas.toDataURL('image/png');
+
+		const link = document.createElement('a');
+		link.href = image;
+		link.download = 'charro.png';
+		link.click();
+	}
 </script>
 
 <div class="runway {options.portador}">
-	<div class="frame-front">
+	<div class="frame-front" bind:this={screenshotTarget}>
 		{#if options.portador == 'jinete'}
 			<img src="/img/base-front.avif" alt="jinete" style:z-index={2} draggable="false" />
 		{/if}
@@ -95,12 +108,13 @@
 		{/if}
 	</div>
 
-	{#if outfit[options.portador][options.etiquette].length > 0}
+	{#if outfit[options.portador][options.etiquette]?.length > 0}
 		<RunwayBtn alt="Reniciar" icon="/img/icons/reset.svg" action={resetOutfit} />
 	{/if}
 	{#if options.portador === 'jinete'}
-		<RunwayBtn alt="Espejo" icon="/img/icons/mirror.svg" action={toggleMirror} position="left" />
+		<RunwayBtn alt="Espejo" icon="/img/icons/mirror.svg" action={toggleMirror} x="left" />
 	{/if}
+	<RunwayBtn alt="Descargar" icon="/img/icons/mirror.svg" action={screenShot} x="left" y="top" />
 </div>
 
 <style lang="scss">

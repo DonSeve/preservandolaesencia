@@ -1,5 +1,5 @@
 <script>
-	import { options } from '$lib/stores/shared.svelte.js';
+	import { options, current } from '$lib/stores/shared.svelte.js';
 	import { browser } from '$app/environment';
 	import gsap from 'gsap';
 
@@ -10,6 +10,7 @@
 		gsap.to('#etiquetteSelected', { xPercent: index * 100 });
 		options.etiquette = etiquette;
 		currentIndex = index;
+		current[options.portador] = {};
 	}
 </script>
 

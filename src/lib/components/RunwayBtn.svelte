@@ -1,9 +1,9 @@
 <script>
 	import { outfit, options } from '$lib/stores/shared.svelte.js';
-	const { action, icon, alt, position = 'right' } = $props();
+	const { action, icon, alt, x = 'right', y = 'bottom' } = $props();
 </script>
 
-<button class="runwayBtn {position === 'left' ? 'left' : ''}" onclick={action}>
+<button class="runwayBtn {x === 'left' ? 'left' : ''} {y === 'top' ? 'top' : ''}" onclick={action}>
 	<img src={icon} {alt} />
 </button>
 
@@ -28,6 +28,11 @@
 		&.left {
 			right: auto;
 			left: var(--position);
+		}
+
+		&.top {
+			top: var(--position);
+			bottom: auto;
 		}
 
 		&:hover {
