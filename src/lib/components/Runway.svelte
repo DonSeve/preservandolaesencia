@@ -81,7 +81,7 @@
 
 		{#if visible.frameCabeza}
 			<div class="frame-cabeza">
-				{#each outfit[options.portador] as item}
+				{#each outfit[options.portador][options.etiquette] as item}
 					{#if item.cabeza}
 						<img
 							src={`/img/runway/${options.portador}/cabeza/${item.cabeza}`}
@@ -95,7 +95,7 @@
 		{/if}
 	</div>
 
-	{#if outfit[options.portador].length > 0}
+	{#if outfit[options.portador][options.etiquette].length > 0}
 		<RunwayBtn alt="Reniciar" icon="/img/icons/reset.svg" action={resetOutfit} />
 	{/if}
 	{#if options.portador === 'jinete'}
