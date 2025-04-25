@@ -118,6 +118,10 @@
 				min-width: 15em;
 				gap: calc(var(--menu-btn-size) / 2);
 
+				&:first-of-type {
+					margin-top: -0.5em;
+				}
+
 				&:hover {
 					p {
 						font-weight: 700;

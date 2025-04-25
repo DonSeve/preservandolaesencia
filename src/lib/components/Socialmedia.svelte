@@ -55,7 +55,7 @@
 			width: fit-content;
 			height: 100%;
 			margin: 0;
-			margin-left: auto;
+			/* margin-left: auto; */
 
 			.container {
 				padding: 0;

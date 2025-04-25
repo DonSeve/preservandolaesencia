@@ -1093,7 +1093,7 @@ export const products = [
       'pantalón con aletón y media bot.'
     ],
     restrictedmessage: 'No se usan con pantalón de aletón, aletilla o botonadura.',
-    zindex: 5,
+    zindex: 7,
     text: [
       'Se usan en la categoría de faena, con pantalones lisos, sin aletón ni botonadura completa. No se usan con chaparreras.',
       'Ahora es común verlas en las adelitas y charras cuando montan a caballo en las escaramuzas.',
@@ -1123,7 +1123,7 @@ export const products = [
       'pantalón con aletón y media bot.'
     ],
     restrictedmessage: 'No se usan con pantalón de aletón, aletilla o botonadura.',
-    zindex: 5,
+    zindex: 7,
     text: [
       'Se usan en la categoría de faena, con pantalones lisos, sin aletón ni botonadura completa. No se usan con chaparreras.',
       'Ahora es común verlas en las adelitas y charras cuando montan a caballo en las escaramuzas.',
@@ -2245,6 +2245,46 @@ export const products = [
     ]
   },
   {
+    variante: 'camisa de nudo',
+    cat: 'traje',
+    subcat: 'camisas',
+    etiqueta: ['faena'],
+    portador: 'jinete',
+    runway: 'camisa-nudo.avif',
+    version: {
+      'pistola con funda normal': 'camisa-nudo-pistola.avif',
+      'pistola con funda recortada': 'camisa-nudo-pistola.avif'
+    },
+    zindex: 19,
+    text: [
+      'El corte del tórax debe de ser recto, no acinturado, deben de ser largas (como si se fueran a fajar). Ya amarrado el nudo se deben formar arrugas y debe cubrir el cinturón. (si no, parece ombliguera)',
+      'La forma y cantidad de bolsillos puede variar. No llevan forro.',
+      'Por debajo se suele usar una camiseta fajada.',
+      'Se usan con el cuello cerrado. (Si se usan por encima de una camisa, ya funcionarían como blusa y en esos casos el cuello va abierto.)',
+      'Si se llegan a adornar será de manera más discreta que las blusas y chazarillas.'
+    ]
+  },
+  {
+    variante: 'camisa de nudo cuello pachuqueño',
+    cat: 'traje',
+    subcat: 'camisas',
+    etiqueta: ['faena'],
+    portador: 'jinete',
+    runway: 'camisa-nudo-militar.avif',
+    version: {
+      'pistola con funda normal': 'camisa-nudo-militar-pistola.avif',
+      'pistola con funda recortada': 'camisa-nudo-militar-pistola.avif'
+    },
+    zindex: 19,
+    text: [
+      'El corte del tórax debe de ser recto, no acinturado, deben de ser largas (como si se fueran a fajar). Ya amarrado el nudo se deben formar arrugas y debe cubrir el cinturón. (si no, parece ombliguera)',
+      'La forma y cantidad de bolsillos puede variar. No llevan forro.',
+      'Por debajo se suele usar una camiseta fajada.',
+      'Se usan con el cuello cerrado. (Si se usan por encima de una camisa, ya funcionarían como blusa y en esos casos el cuello va abierto.)',
+      'Si se llegan a adornar será de manera más discreta que las blusas y chazarillas.'
+    ]
+  },
+  {
     variante: 'pachuqueña cuello militar',
     nombrecompleto: 'camisa pachuqueña de cuello militar',
     cat: 'traje',
@@ -2308,7 +2348,7 @@ export const products = [
     ]
   },
   // *****************************************
-  // PANTALON
+  // PANTALONES
   // *****************************************
   {
     variante: 'tapabalazo',
@@ -2318,7 +2358,10 @@ export const products = [
     etiqueta: ['faena'],
     portador: 'jinete',
     runway: 'pantalon-tapabalazo-faena.avif',
-    zindex: 3,
+    zindex: 5,
+    modify: [
+      'refuerzo de cuadrilera',
+    ],
     text: [
       'El pantalón debe de ser suficientemente alto en la cintura para que, si se usa chaleco, este cubra el cinturón y no se vea la camisa por debajo, ni por detrás. Deben permitir todos los movimientos. Deben de ser mucho más largos que un pantalón civil, para que al estar sentados no se separen del tacón y montados de la espuela, este largo extra formará el fuelle debajo de la pantorrilla. Deben tener forma de campana en la forma inferior para cubrir correctamente hasta medio empeine y parte de tacón.',
       'Es un corte muy tradicional, evolución de las portañuelas (abertura frontal de las calzoneras antiguas). Por debajo del tapabalazo están los bolsillos del pantalón. Pueden estar cerrados con tres o más botones en los costados y con uno o dos en la parte frontal. El material de los botones dependerá de la categoría y estilo del traje. Este tipo de pantalón puede llevar aletón, aletilla o liso.',
@@ -2339,7 +2382,10 @@ export const products = [
     runway: 'pantalon-tapabalazo-mediagala.avif',
     restricted: ['botas Jalisco', 'botas Jalisco con suela volada'],
     restrictedmessage: 'Botas Jalisco no se usan con pantalones de aletón, aletilla o botonadura.',
-    zindex: 3,
+    modify: [
+      'refuerzo de cuadrilera',
+    ],
+    zindex: 5,
     text: [
       'El pantalón debe de ser suficientemente alto en la cintura para que, si se usa chaleco, este cubra el cinturón y no se vea la camisa por debajo, ni por detrás. Deben permitir todos los movimientos. Deben de ser mucho más largos que un pantalón civil, para que al estar sentados no se separen del tacón y montados de la espuela, este largo extra formará el fuelle debajo de la pantorrilla. Deben tener forma de campana en la forma inferior para cubrir correctamente hasta medio empeine y parte de tacón.',
       'Es un corte muy tradicional, evolución de las portañuelas (abertura frontal de las calzoneras antiguas). Por debajo del tapabalazo están los bolsillos del pantalón. Pueden estar cerrados con tres o más botones en los costados y con uno o dos en la parte frontal. El material de los botones dependerá de la categoría y estilo del traje. Este tipo de pantalón puede llevar aletón, aletilla o liso.',
@@ -2360,7 +2406,7 @@ export const products = [
     runway: 'pantalon-tapabalazo-botentera-gala.avif',
     restricted: ['botas Jalisco', 'botas Jalisco con suela volada'],
     restrictedmessage: 'Botas Jalisco no se usan con pantalones de aletón, aletilla o botonadura.',
-    zindex: 3,
+    zindex: 5,
     text: [
       'El pantalón debe de ser suficientemente alto en la cintura para que, si se usa chaleco, este cubra el cinturón y no se vea la camisa por debajo, ni por detrás. Deben permitir todos los movimientos. Deben de ser mucho más largos que un pantalón civil, para que al estar sentados no se separen del tacón y montados de la espuela, este largo extra formará el fuelle debajo de la pantorrilla. Deben tener forma de campana en la forma inferior para cubrir correctamente hasta medio empeine y parte de tacón.',
       'Es un corte muy tradicional, evolución de las portañuelas (abertura frontal de las calzoneras antiguas). Por debajo del tapabalazo están los bolsillos del pantalón. Pueden estar cerrados con tres o más botones en los costados y con uno o dos en la parte frontal. El material de los botones dependerá de la categoría y estilo del traje. Este tipo de pantalón puede llevar aletón, aletilla o liso.',
@@ -2382,7 +2428,10 @@ export const products = [
     runway: 'pantalon-tapabalazo-aleton-faena.avif',
     restricted: ['botas Jalisco', 'botas Jalisco con suela volada'],
     restrictedmessage: 'Botas Jalisco no se usan con pantalones de aletón, aletilla o botonadura.',
-    zindex: 3,
+    zindex: 5,
+    modify: [
+      'refuerzo de cuadrilera',
+    ],
     text: [
       'El pantalón debe de ser suficientemente alto en la cintura para que, si se usa chaleco, este cubra el cinturón y no se vea la camisa por debajo, ni por detrás. Deben permitir todos los movimientos. Deben de ser mucho más largos que un pantalón civil, para que al estar sentados no se separen del tacón y montados de la espuela, este largo extra formará el fuelle debajo de la pantorrilla. Deben tener forma de campana en la forma inferior para cubrir correctamente hasta medio empeine y parte de tacón.',
       'Es un corte muy tradicional, evolución de las portañuelas (abertura frontal de las calzoneras antiguas). Por debajo del tapabalazo están los bolsillos del pantalón. Pueden estar cerrados con tres o más botones en los costados y con uno o dos en la parte frontal. El material de los botones dependerá de la categoría y estilo del traje. Este tipo de pantalón puede llevar aletón, aletilla o liso.',
@@ -2404,7 +2453,10 @@ export const products = [
     runway: 'pantalon-tapabalazo-aleton-mediagala.avif',
     restricted: ['botas Jalisco', 'botas Jalisco con suela volada'],
     restrictedmessage: 'Botas Jalisco no se usan con pantalones de aletón, aletilla o botonadura.',
-    zindex: 3,
+    zindex: 5,
+    modify: [
+      'refuerzo de cuadrilera',
+    ],
     text: [
       'El pantalón debe de ser suficientemente alto en la cintura para que, si se usa chaleco, este cubra el cinturón y no se vea la camisa por debajo, ni por detrás. Deben permitir todos los movimientos. Deben de ser mucho más largos que un pantalón civil, para que al estar sentados no se separen del tacón y montados de la espuela, este largo extra formará el fuelle debajo de la pantorrilla. Deben tener forma de campana en la forma inferior para cubrir correctamente hasta medio empeine y parte de tacón.',
       'Es un corte muy tradicional, evolución de las portañuelas (abertura frontal de las calzoneras antiguas). Por debajo del tapabalazo están los bolsillos del pantalón. Pueden estar cerrados con tres o más botones en los costados y con uno o dos en la parte frontal. El material de los botones dependerá de la categoría y estilo del traje. Este tipo de pantalón puede llevar aletón, aletilla o liso.',
@@ -2426,7 +2478,7 @@ export const products = [
     runway: 'pantalon-tapabalazo-aletilla-botentera-gala.avif',
     restricted: ['botas Jalisco', 'botas Jalisco con suela volada'],
     restrictedmessage: 'Botas Jalisco no se usan con pantalones de aletón, aletilla o botonadura.',
-    zindex: 3,
+    zindex: 5,
     text: [
       'El pantalón debe de ser suficientemente alto en la cintura para que, si se usa chaleco, este cubra el cinturón y no se vea la camisa por debajo, ni por detrás. Deben permitir todos los movimientos. Deben de ser mucho más largos que un pantalón civil, para que al estar sentados no se separen del tacón y montados de la espuela, este largo extra formará el fuelle debajo de la pantorrilla. Deben tener forma de campana en la forma inferior para cubrir correctamente hasta medio empeine y parte de tacón.',
       'Es un corte muy tradicional, evolución de las portañuelas (abertura frontal de las calzoneras antiguas). Por debajo del tapabalazo están los bolsillos del pantalón. Pueden estar cerrados con tres o más botones en los costados y con uno o dos en la parte frontal. El material de los botones dependerá de la categoría y estilo del traje. Este tipo de pantalón puede llevar aletón, aletilla o liso.',
@@ -2445,7 +2497,11 @@ export const products = [
     etiqueta: ['faena'],
     portador: 'jinete',
     runway: 'pantalon-liso-faena.avif',
-    zindex: 3,
+    zindex: 5,
+    modify: [
+      'refuerzo de cuadrilera',
+      'refuerzo de botas',
+    ],
     text: [
       'El pantalón debe de ser suficientemente alto en la cintura para que, si se usa chaleco, este cubra el cinturón y no se vea la camisa por debajo, ni por detrás. Deben permitir todos los movimientos. Deben de ser mucho más largos que un pantalón civil, para que al estar sentados no se separen del tacón y montados de la espuela, este largo extra formará el fuelle debajo de la pantorrilla. Deben tener forma de campana en la forma inferior para cubrir correctamente hasta medio empeine y parte de tacón.',
       'Zonas que se pueden adornar (OJO: los adornos son opcionales y no hace falta adornar todas las zonas marcadas):',
@@ -2465,7 +2521,11 @@ export const products = [
     runway: 'pantalon-liso-mediabot-mediagala.avif',
     restricted: ['botas Jalisco', 'botas Jalisco con suela volada'],
     restrictedmessage: 'Botas Jalisco no se usan con pantalones de aletón, aletilla o botonadura.',
-    zindex: 3,
+    zindex: 5,
+    modify: [
+      'refuerzo de cuadrilera',
+      'refuerzo de botas',
+    ],
     text: [
       'El pantalón debe de ser suficientemente alto en la cintura para que, si se usa chaleco, este cubra el cinturón y no se vea la camisa por debajo, ni por detrás. Deben permitir todos los movimientos. Deben de ser mucho más largos que un pantalón civil, para que al estar sentados no se separen del tacón y montados de la espuela, este largo extra formará el fuelle debajo de la pantorrilla. Deben tener forma de campana en la forma inferior para cubrir correctamente hasta medio empeine y parte de tacón.',
       'Zonas que se pueden adornar (OJO: los adornos son opcionales y no hace falta adornar todas las zonas marcadas):',
@@ -2485,7 +2545,7 @@ export const products = [
     runway: 'pantalon-liso-botentera-gala.avif',
     restricted: ['botas Jalisco', 'botas Jalisco con suela volada'],
     restrictedmessage: 'Botas Jalisco no se usan con pantalones de aletón, aletilla o botonadura.',
-    zindex: 3,
+    zindex: 5,
     text: [
       'El pantalón debe de ser suficientemente alto en la cintura para que, si se usa chaleco, este cubra el cinturón y no se vea la camisa por debajo, ni por detrás. Deben permitir todos los movimientos. Deben de ser mucho más largos que un pantalón civil, para que al estar sentados no se separen del tacón y montados de la espuela, este largo extra formará el fuelle debajo de la pantorrilla. Deben tener forma de campana en la forma inferior para cubrir correctamente hasta medio empeine y parte de tacón.',
       'Zonas que se pueden adornar (OJO: los adornos son opcionales y no hace falta adornar todas las zonas marcadas):',
@@ -2504,7 +2564,11 @@ export const products = [
     runway: 'pantalon-liso-aleton-faena.avif',
     restricted: ['botas Jalisco', 'botas Jalisco con suela volada'],
     restrictedmessage: 'Botas Jalisco no se usan con pantalones de aletón, aletilla o botonadura.',
-    zindex: 3,
+    zindex: 5,
+    modify: [
+      'refuerzo de cuadrilera',
+      'refuerzo de botas',
+    ],
     text: [
       'El pantalón debe de ser suficientemente alto en la cintura para que, si se usa chaleco, este cubra el cinturón y no se vea la camisa por debajo, ni por detrás. Deben permitir todos los movimientos. Deben de ser mucho más largos que un pantalón civil, para que al estar sentados no se separen del tacón y montados de la espuela, este largo extra formará el fuelle debajo de la pantorrilla. Deben tener forma de campana en la forma inferior para cubrir correctamente hasta medio empeine y parte de tacón.',
       'Pueden llevar tarugos o botones de distintos materiales, parecido al tapabalazo (pues en realidad son el vestigio de ellos). En esos casos de un lado (frontal) queda el botón y de otro lado la cadenilla o lo que lo sujete, tipo trenza de gamuza o cordón.',
@@ -2524,7 +2588,11 @@ export const products = [
     runway: 'pantalon-liso-aleton-tarugos-faena.avif',
     restricted: ['botas Jalisco', 'botas Jalisco con suela volada'],
     restrictedmessage: 'Botas Jalisco no se usan con pantalones de aletón, aletilla o botonadura.',
-    zindex: 3,
+    zindex: 5,
+    modify: [
+      'refuerzo de cuadrilera',
+      'refuerzo de botas',
+    ],
     text: [
       'El pantalón debe de ser suficientemente alto en la cintura para que, si se usa chaleco, este cubra el cinturón y no se vea la camisa por debajo, ni por detrás. Deben permitir todos los movimientos. Deben de ser mucho más largos que un pantalón civil, para que al estar sentados no se separen del tacón y montados de la espuela, este largo extra formará el fuelle debajo de la pantorrilla. Deben tener forma de campana en la forma inferior para cubrir correctamente hasta medio empeine y parte de tacón.',
       'Pueden llevar tarugos o botones de distintos materiales, parecido al tapabalazo (pues en realidad son el vestigio de ellos). En esos casos de un lado (frontal) queda el botón y de otro lado la cadenilla o lo que lo sujete, tipo trenza de gamuza o cordón.',
@@ -2545,7 +2613,11 @@ export const products = [
     runway: 'pantalon-liso-aleton-mediabot-mediagala.avif',
     restricted: ['botas Jalisco', 'botas Jalisco con suela volada'],
     restrictedmessage: 'Botas Jalisco no se usan con pantalones de aletón, aletilla o botonadura.',
-    zindex: 3,
+    zindex: 5,
+    modify: [
+      'refuerzo de cuadrilera',
+      'refuerzo de botas',
+    ],
     text: [
       'El pantalón debe de ser suficientemente alto en la cintura para que, si se usa chaleco, este cubra el cinturón y no se vea la camisa por debajo, ni por detrás. Deben permitir todos los movimientos. Deben de ser mucho más largos que un pantalón civil, para que al estar sentados no se separen del tacón y montados de la espuela, este largo extra formará el fuelle debajo de la pantorrilla. Deben tener forma de campana en la forma inferior para cubrir correctamente hasta medio empeine y parte de tacón.',
       'Pueden llevar tarugos o botones de distintos materiales, parecido al tapabalazo (pues en realidad son el vestigio de ellos). En esos casos de un lado (frontal) queda el botón y de otro lado la cadenilla o lo que lo sujete, tipo trenza de gamuza o cordón.',
@@ -2565,7 +2637,7 @@ export const products = [
     portador: 'jinete',
     runway: '',
     back: 'pantalon-mecapal-back.avif',
-    zindex: 3,
+    zindex: 5,
     allowsame: true,
     text: [
       'Se puede aplicar a cualquier pantalón y cualquier categoría. Este cintito servía para ajustar el pantalón, por lo que debe quedar cerca de la pretina del pantalón.'
@@ -2574,19 +2646,121 @@ export const products = [
   // *****************************************
   // REFUERZOS PANTALON
   // *****************************************
-  // {
-  //   "variante": "botas",
-  //   "cat": "traje",
-  //   "subcat": "refuerzos de pantalón",
-  //   "etiqueta": ['faena', 'media gala'],
-  //   "portador": "jinete",
-  //   "runway": "",
-  //   "back": "pantalon-mecapal-back.avif",
-  //   "allowsame": true,
-  //   "require": ['pantalón liso', 'pantalón liso con media bot.'],
-  //   "requiremessage": "Requiere un pantalón liso.",
-  //   "zindex": 3,
-  // },
+  {
+    variante: "calavera",
+    cat: "traje",
+    subcat: "refuerzos de pantalón",
+    etiqueta: ['faena'],
+    portador: "jinete",
+    back: 'refuerzos-calavera-liso.avif',
+    require: ['pantalón liso'],
+    requiremessage: 'Requiere un pantalón liso',
+    allowsame: true,
+    zindex: 6,
+    text: [
+      'Del mismo color que los adornos y refuerzos de gamuza que lleva el pantalón. Si va solo, que el color no sea muy llamativo.'
+    ]
+  },
+  {
+    variante: "cachiruleado 1",
+    cat: "traje",
+    subcat: "refuerzos de pantalón",
+    etiqueta: ['faena', 'media gala', 'gala', 'gran gala'],
+    portador: "jinete",
+    runway: "refuerzos-cachiruleado1-liso.avif",
+    require: [
+      'pantalón liso',
+      'pantalón liso con media bot.',
+      'pantalón liso con bot. entera'
+    ],
+    requiremessage: 'Requiere un pantalón liso',
+    allowsame: false,
+    zindex: 6,
+    text: [
+      'La forma y el área que ocupa puede variar según los adornos y estilo, lo mismo que las orillas. Puede además llevar botonadura si la categoría lo exige.'
+    ]
+  },
+  {
+    variante: "cachiruleado 2",
+    cat: "traje",
+    subcat: "refuerzos de pantalón",
+    etiqueta: ['faena', 'media gala', 'gala', 'gran gala'],
+    portador: "jinete",
+    runway: "refuerzos-cachiruleado2-liso.avif",
+    require: [
+      'pantalón liso',
+      'pantalón liso con media bot.',
+      'pantalón liso con bot. entera'
+    ],
+    requiremessage: 'Requiere un pantalón liso',
+    allowsame: false,
+    zindex: 6,
+    text: [
+      'La forma y el área que ocupa puede variar según los adornos y estilo, lo mismo que las orillas. Puede además llevar botonadura si la categoría lo exige.'
+    ]
+  },
+  {
+    variante: "refuerzo de cuadrilera",
+    cat: "traje",
+    subcat: "refuerzos de pantalón",
+    etiqueta: ['faena', 'media gala'],
+    portador: "jinete",
+    allowsame: true,
+    version: {
+      'pantalón liso': 'refuerzos-cuadrilera-liso.avif',
+      'pantalón liso con media bot.': 'refuerzos-cuadrilera-liso.avif',
+      'tapabalazo': 'refuerzos-cuadrilera-tapabalazo.avif',
+      'tapabalazo con media bot.': 'refuerzos-cuadrilera-tapabalazo.avif',
+      'tapabalazo con aletón': 'refuerzos-cuadrilera-tapabalazo-aleton.avif',
+      'pantalón con aletón': 'refuerzos-cuadrilera-aleton.avif',
+      'pantalón con aletón y tarugos': 'refuerzos-cuadrilera-aleton.avif',
+      'pantalón con aletón y media bot.': 'refuerzos-cuadrilera-aleton.avif',
+    },
+    require: [
+      'pantalón liso',
+      'pantalón liso con media bot.',
+      'tapabalazo',
+      'tapabalazo con media bot.',
+      'tapabalazo con aletón',
+      'tapabalazo con aletón y media bot.',
+      'pantalón con aletón',
+      'pantalón con aletón y tarugos', ,
+      'pantalón con aletón y media bot.',
+    ],
+    requiremessage: 'Requiere un pantalón',
+    zindex: 6,
+    text: [
+      'Para que se vea bonita, lo ideal es que toda la parte alta del pantalón sea de gamuza (pretina, presillas, etc.)'
+    ]
+  },
+  {
+    variante: "refuerzo de botas",
+    cat: "traje",
+    subcat: "refuerzos de pantalón",
+    etiqueta: ['faena', 'media gala'],
+    portador: "jinete",
+    runway: "",
+    allowsame: true,
+    version: {
+      'pantalón liso': 'refuerzos-botas-liso.avif',
+      'pantalón liso con media bot.': 'refuerzos-botas-liso.avif',
+      'pantalón con aletón': 'refuerzos-botas-aleton.avif',
+      'pantalón con aletón y tarugos': 'refuerzos-botas-aleton.avif',
+      'pantalón con aletón y media bot.': 'refuerzos-botas-aleton.avif',
+    },
+    require: [
+      'pantalón liso',
+      'pantalón liso con media bot.',
+      'pantalón con aletón',
+      'pantalón con aletón y tarugos', ,
+      'pantalón con aletón y media bot.',
+    ],
+    requiremessage: 'Requiere un pantalón liso o de aletón',
+    zindex: 6,
+    text: [
+      'La gamuza utilizada debe ser la misma de la greca o demás refuerzos si es que los lleva, o hacer juego con la tela del pantalón o el resto del traje. Siempre lo más discreto es lo mejor.'
+    ]
+  },
   // *****************************************
   // CORBATAS
   // *****************************************
@@ -3014,7 +3188,7 @@ export const products = [
     version: {
       'añadir pialeras': 'espuelas-jinetas-pialeras.avif'
     },
-    zindex: 11,
+    zindex: 3,
     text: [
       'Entre las Jinetas y las coleadoras, las jinetas son las más tradicionales. No hay que exagerar en el tamaño de la rodaja. Son ideales para la gente alta. Lo más bonito es que la caja sea del alto del tacón y lo cubra totalmente. Prefiere espuelas de rodaja grande que a las de casquillejos larguísimos y rodajas diminutas. Siempre van en el tacón.'
     ],
@@ -3034,7 +3208,7 @@ export const products = [
     version: {
       'añadir pialeras': 'espuelas-coleadoras-pialeras.avif'
     },
-    zindex: 11,
+    zindex: 3,
     text: [
       'Se llaman así porque por la rodaja de menor tamaño (por lo tanto, los casquillejos serán más cortos) se facilita más el acto de arcionar al colear. Por todo lo demás son iguales que las jinetas'
     ],
@@ -3211,6 +3385,8 @@ export const products = [
       'blusa de nudo cuello normal',
       'camisa de pretina',
       'camisa de pretina cuello pachuqueño (militar)',
+      'camisa de nudo',
+      'camisa de nudo cuello pachuqueño',
       'chaqueta cuello redondo',
       'chaqueta cuello de picos',
       'chaquetilla cuello redondo',
@@ -3254,6 +3430,8 @@ export const products = [
       'blusa de nudo cuello normal',
       'camisa de pretina',
       'camisa de pretina cuello pachuqueño (militar)',
+      'camisa de nudo',
+      'camisa de nudo cuello pachuqueño',
       'chaqueta cuello redondo',
       'chaqueta cuello de picos',
       'chaquetilla cuello redondo',
@@ -3501,12 +3679,14 @@ export const products = [
     runway: 'cinturon.avif',
     zindex: 6,
     back: 'cinturon-back.avif',
-    restricted: [
-      '2 hebillas cuadradas',
-      '2 hebillas de herradura horizontal',
-      '2 hebillas de herradura vertical'
-    ],
     restrictedmessage: 'Para uso con una sola hebilla.',
+    dependencies: [
+      'hebilla normal',
+      'hebilla cuadrada',
+      'hebilla de herradura horizontal',
+      'hebilla rectangular',
+      'hebilla de herradura vertical'
+    ],
     text: [
       'Pueden ser lisos o adornados, haciendo juego con el cueraje de la silla y/o con los botines. Son anchos, de 2 pulgadas aprox.'
     ]
@@ -3520,12 +3700,14 @@ export const products = [
     runway: 'cinturon-carrillera.avif',
     zindex: 6,
     back: 'cinturon-carrillera-back.avif',
-    restricted: [
-      '2 hebillas cuadradas',
-      '2 hebillas de herradura horizontal',
-      '2 hebillas de herradura vertical'
-    ],
     restrictedmessage: 'Para uso con una sola hebilla.',
+    dependencies: [
+      'hebilla normal',
+      'hebilla cuadrada',
+      'hebilla de herradura horizontal',
+      'hebilla rectangular',
+      'hebilla de herradura vertical'
+    ],
     text: [
       'Pueden ser lisos o adornados, haciendo juego con el cueraje de la silla y/o con los botines. Son anchos, de 2 pulgadas aprox.',
       'En estos casos siempre se portan con revolver en su funda.'
@@ -3540,6 +3722,11 @@ export const products = [
     runway: 'cinturon-peto.avif',
     zindex: 6,
     back: 'cinturon-back.avif',
+    dependencies: [
+      '2 hebillas cuadradas',
+      '2 hebillas de herradura horizontal',
+      '2 hebillas de herradura vertical'
+    ],
     text: [
       'Pueden ser lisos o adornados, haciendo juego con el cueraje de la silla y/o con los botines. Son anchos, de 2 pulgadas aprox.',
       'En frente llevan un peto que puede variar en su forma, pero por lo general llevan una parte ancha central y los cabos más delgados que entrarán en las hebillas. Por lo general llevan carrillera, pero también puede ir sin ella.'
@@ -3554,6 +3741,11 @@ export const products = [
     runway: 'cinturon-peto_y_carrillera.avif',
     zindex: 6,
     back: 'cinturon-carrillera-back.avif',
+    dependencies: [
+      '2 hebillas cuadradas',
+      '2 hebillas de herradura horizontal',
+      '2 hebillas de herradura vertical'
+    ],
     text: [
       'Pueden ser lisos o adornados, haciendo juego con el cueraje de la silla y/o con los botines. Son anchos, de 2 pulgadas aprox.',
       'En frente llevan un peto que puede variar en su forma, pero por lo general llevan una parte ancha central y los cabos más delgados que entrarán en las hebillas.',
@@ -3895,6 +4087,8 @@ export const products = [
       Zaldívar: 'turma-medio-zaldivar.avif',
       buchón: 'turma-medio-buchon.avif'
     },
+    restricted: ['sin hombros'],
+    restrictedmessage: 'Solo en fuste con hombros',
     zindex: 7,
     text: [
       'Se llama turma a la protección que se puede añadir a la cabeza y horqueta del fuste para protegerlo del roce de la reata y riendas, y prolongarle la “vida” al fuste. La turma puede cubrir solo la cabeza, la cabeza y medios hombros, o la cabeza y la horqueta entera. Está hecha con el escroto de los testículos del toro, por lo que su color puede variar. Es un detalle muy charro, pero no es correcto usarlo en sillas de Gran Gala porque no van bien con los fustes plateados.',
@@ -4228,6 +4422,7 @@ export const products = [
     },
     require: ['basto para cantinas redondas', 'basto para cantinas redondas, de ojal'],
     requiremessage: 'Requiere un basto para cantinas redondas.',
+    modify: ['reata'],
     zindex: 18,
     text: [
       'Las cantinas son dos alforjas o bolsas de cuero unidas entre sí, que se sujetan con los tientos y chapetones a la parte trasera de la montura y sirven para guardar y transportar objetos en su interior. Suelen ponerse encima de las contrareatas, pero han existido monturas que por su diseño las contrareatas quedan por encima de las cantinas. Pueden variar en las dimensiones, en las formas, en los ángulos de sus esquinas, así como la forma de las tapas y la manera en que se cierran.',
@@ -4247,6 +4442,7 @@ export const products = [
       'basto para cantinas cuadradas': 'cantinas-cartera.avif',
       'basto para cantinas cuadradas, de ojal': 'cantinas-cartera.avif'
     },
+    modify: ['reata'],
     require: ['basto para cantinas cuadradas', 'basto para cantinas cuadradas, de ojal'],
     requiremessage: 'Requiere un basto para cantinas cuadradas.',
     zindex: 18,
@@ -4268,6 +4464,7 @@ export const products = [
       'basto para cantinas cuadradas': 'cantinas-cuadradas.avif',
       'basto para cantinas cuadradas, de ojal': 'cantinas-cuadradas.avif'
     },
+    modify: ['reata'],
     require: ['basto para cantinas cuadradas', 'basto para cantinas cuadradas, de ojal'],
     requiremessage: 'Requiere un basto para cantinas cuadradas.',
     zindex: 18,
@@ -4289,6 +4486,7 @@ export const products = [
       'basto para cantinas cuadradas': 'cantinas-vaquerillos.avif',
       'basto para cantinas cuadradas, de ojal': 'cantinas-vaquerillos.avif'
     },
+    modify: ['reata'],
     require: ['basto para cantinas cuadradas', 'basto para cantinas cuadradas, de ojal'],
     requiremessage: 'Requiere un basto para cantinas cuadradas.',
     zindex: 38,
@@ -4340,6 +4538,24 @@ export const products = [
     descImg: ['enreatados-chorizo.avif']
   },
   {
+    variante: 'corbata sin hebilla',
+    nombrecompleto: 'enreatado de corbata sin hebilla',
+    cat: 'cueraje',
+    subcat: 'enreatados',
+    etiqueta: ['faena', 'media gala', 'gala', 'gran gala'],
+    portador: 'caballo',
+    runway: 'enreatados-corbata1.avif',
+    restricted: ['chapas en argolla'],
+    restrictedmessage: 'No se pueden poner con enreatados de corbata.',
+    zindex: 13,
+    text: [
+      'Los enreatados son dos piezas de cuero que dando la vuelta a la horqueta del fuste se sujetan con dos chapetones a sendas argollas de cada lado de la montura. De esta argolla también se sujetarán los contraenreatados, y el látigo y contralátigo respectivamente, que en conjunto mantienen el fuste en su lugar y sujetan la silla al caballo con ayuda del cincho. Pueden ir adornadas según el cueraje o ser de pial doblado longitudinalmente.',
+      'Estos enreatados van sujetos en un solo punto y dan vuelta a la argolla formando un nudo similar al de una corbata, de ahí su nombre. Pueden ir sujetos con una hebilla, que quedará en la parte frontal del fuste o encima de la argolla. Si el nudo está hecho de forma diferente al descrito y provocaque la argolla se aleje demasiado del fuste (hacia abajo), está mal hecho el nudo y no son charros ni correctos.',
+      'Las zonas que se suelen adornar son las siguientes: (en verde las principales y en azul las secundarias. Por ejemplo, en las principales suelen estar los bordados y en las secundarias los repujados, pero esto no es una regla.)',
+    ],
+    descImg: ['enreatados-corbata-sinhebilla.avif']
+  },
+  {
     variante: 'corbata 1',
     nombrecompleto: 'enreatado de corbata 2',
     cat: 'cueraje',
@@ -4348,6 +4564,8 @@ export const products = [
     portador: 'caballo',
     runway: 'enreatados-corbata1.avif',
     zindex: 13,
+    restricted: ['chapas en argolla'],
+    restrictedmessage: 'No se pueden poner con enreatados de corbata.',
     text: [
       'Los enreatados son dos piezas de cuero que dando la vuelta a la horqueta del fuste se sujetan con dos chapetones a sendas argollas de cada lado de la montura. De esta argolla también se sujetarán los contraenreatados, y el látigo y contralátigo respectivamente, que en conjunto mantienen el fuste en su lugar y sujetan la silla al caballo con ayuda del cincho. Pueden ir adornadas según el cueraje o ser de pial doblado longitudinalmente.',
       'Estos enreatados van sujetos en un solo punto y dan vuelta a la argolla formando un nudo similar al de una corbata, de ahí su nombre. Pueden ir sujetos con una hebilla, que quedará en la parte frontal del fuste o encima de la argolla. Si el nudo está hecho de forma diferente al descrito y provocaque la argolla se aleje demasiado del fuste (hacia abajo), está mal hecho el nudo y no son charros ni correctos.',
@@ -4363,6 +4581,8 @@ export const products = [
     etiqueta: ['faena', 'media gala', 'gala', 'gran gala'],
     portador: 'caballo',
     runway: 'enreatados-corbata2.avif',
+    restricted: ['chapas en argolla'],
+    restrictedmessage: 'No se pueden poner con enreatados de corbata.',
     zindex: 13,
     text: [
       'Los enreatados son dos piezas de cuero que dando la vuelta a la horqueta del fuste se sujetan con dos chapetones a sendas argollas de cada lado de la montura. De esta argolla también se sujetarán los contraenreatados, y el látigo y contralátigo respectivamente, que en conjunto mantienen el fuste en su lugar y sujetan la silla al caballo con ayuda del cincho. Pueden ir adornadas según el cueraje o ser de pial doblado longitudinalmente.',
@@ -4852,6 +5072,10 @@ export const products = [
     etiqueta: ['faena', 'media gala', 'gala', 'gran gala'],
     portador: 'caballo',
     runway: 'cincho-contapa-bocado.avif',
+    extraimg: {
+      archivo: 'chapa-oreja.avif',
+      zindex: 16,
+    },
     replacecat: ['sin tapa'],
     zindex: 9,
     text: [
@@ -4891,6 +5115,10 @@ export const products = [
     etiqueta: ['faena', 'media gala', 'gala'],
     portador: 'caballo',
     runway: 'cincho-sintapa-bocado.avif',
+    extraimg: {
+      archivo: 'chapa-oreja.avif',
+      zindex: 16,
+    },
     replacecat: ['con tapa'],
     zindex: 9,
     text: [
@@ -4976,27 +5204,24 @@ export const products = [
   // HERRAJE
   // *****************************************
   {
-    variante: 'chapetón frente',
+    variante: 'chapetones',
     cat: 'herraje',
     subcat: 'herraje',
     etiqueta: ['faena', 'media gala', 'gala', 'gran gala'],
     portador: 'caballo',
     runway: 'chapeton-frente.avif',
+    garrocha: 'chapeton.avif',
+    extraimg: [
+      {
+        archivo: 'chapeton-atras.avif',
+        zindex: 25,
+      },
+      {
+        archivo: 'tientos-saraperos.avif',
+        zindex: 39,
+      },
+    ],
     zindex: 12,
-    allowsame: true,
-    text: [
-      'Se llama herraje a todas las piezas de metal de la silla, ya sea expuesto o forrado. Entre ellas se incluye a los estribos, machete, freno, hebillas, argollas, espuelas, chapetones, pasadores, etc.',
-      'Los chapetones son piezas generalmente redondas que sirven para unir piezas de la montura y arreos, ya sea con tornillos o tientos (según el caso). Pueden variar en cuanto a: forma, tamaño, material, estilo y adornos, pero siempre haciendo juego con el resto de la silla. Suelen ir acompañados en su parte trasera de rosetones de cuero o pial.'
-    ]
-  },
-  {
-    variante: 'chapetón atrás',
-    cat: 'herraje',
-    subcat: 'herraje',
-    etiqueta: ['faena', 'media gala', 'gala', 'gran gala'],
-    portador: 'caballo',
-    runway: 'chapeton-atras.avif',
-    zindex: 25,
     allowsame: true,
     text: [
       'Se llama herraje a todas las piezas de metal de la silla, ya sea expuesto o forrado. Entre ellas se incluye a los estribos, machete, freno, hebillas, argollas, espuelas, chapetones, pasadores, etc.',
@@ -5017,6 +5242,12 @@ export const products = [
     },
     require: ['hebijón derecho', 'hebijón de flecha', 'hebijón de bocado'],
     requiremessage: 'Requiere un cincho.',
+    restricted: [
+      'corbata sin hebilla',
+      'corbata 1',
+      'corbata 2'
+    ],
+    restrictedmessage: 'No se pueden poner con enreatados de corbata.',
     zindex: 30,
     allowsame: true,
     text: [
@@ -5489,9 +5720,11 @@ export const products = [
     variante: 'ronzal al bozal',
     cat: 'arreos de cabeza',
     subcat: 'ronzales y gargantones',
-    etiqueta: ['SIN'],
+    etiqueta: ['faena', 'media gala', 'gala', 'gran gala', 'ceremonia'],
     portador: 'caballo',
     runway: 'ronzales-bozal.avif',
+    require: ['bozal', 'bozalillo'],
+    requiremessage: 'Requiere bozal o bozalillo',
     zindex: 35,
     text: [
       'El ronzal sirve para apersogar al caballo cuando nos apeamos y para conducirlo a pie o desde otro caballo si hace falta. (Indispensable en exteriores) Existen varias maneras de colocarlo en cada uno de los extremos, siendo el más común el que se ata al bozal por medio de la gaza que tiene, y el resto se forman vueltas y se atan con el tiento delantero del lado de montar (en el lado contrario en las albardas).'
@@ -5519,6 +5752,15 @@ export const products = [
     etiqueta: ['faena', 'media gala'],
     portador: 'caballo',
     runway: 'ronzales-anudado.avif',
+    restrictsubcat: ['pecho y encuentro'],
+    restricted: [
+      'pechera',
+      'pechopretal',
+      'pechopretal tejido',
+      'pechopretal forrado',
+      'gargantón de cuero'
+    ],
+    restrictedmessage: 'No se usa con pechera, pechopretal o gargantón de cuero',
     zindex: 1,
     text: [
       'El ronzal sirve para apersogar al caballo cuando nos apeamos y para conducirlo a pie o desde otro caballo si hace falta. (Indispensable en exteriores) Existen varias maneras de colocarlo en cada uno de los extremos, siendo el más común el que se ata al bozal por medio de la gaza que tiene, y el resto se forman vueltas y se atan con el tiento delantero del lado de montar (en el lado contrario en las albardas).',
@@ -5533,6 +5775,15 @@ export const products = [
     etiqueta: ['media gala', 'gala', 'gran gala'],
     portador: 'caballo',
     runway: 'ronzales-garganton.avif',
+    restrictsubcat: ['pecho y encuentro'],
+    restricted: [
+      'pechera',
+      'pechopretal',
+      'pechopretal tejido',
+      'pechopretal forrado',
+      'gargantón de cuero'
+    ],
+    restrictedmessage: 'No se usa con pechera, pechopretal o gargantón de cuero',
     zindex: 1,
     text: [
       'Los gargantones con alamares, botones y escobetillas ya no tienen la doble función de ser adorno y ronzal, pero al seguir siendo en esencia un ronzal, no deben usarse al mismo tiempo que un ronzal.',
@@ -5635,6 +5886,12 @@ export const products = [
     etiqueta: ['faena', 'media gala'],
     portador: 'caballo',
     garrocha: 'reata.avif',
+    version: {
+      'cantinas redondas': 'reata-cantina-redonda.avif',
+      'cantinas cuadradas': 'reata-cantina-cuadrada.avif',
+      'cantinas de cartera': 'reata-cantina-cuadrada.avif',
+      'cantinas de vaquerillos': 'reata-cantina-cuadrada.avif',
+    },
     zindex: 5,
     text: [
       'La reata tiene diferentes formas de llevarse en la montura según el tipo de montura. Si es de cantinas se lleva debajo de la cantina del lado de montar (de preferencia con correa de hebilla), con las vueltas del tamaño de la cantina, con una media lazada hecha, y con la gaza apuntando hacia atrás.',
@@ -5735,6 +5992,7 @@ export const products = [
       'sudaderas sencillas': 'armas-machete-arciones-sudaderas.avif',
       'sudaderas dobles': 'armas-machete-arciones-sudaderas.avif'
     },
+    allowsame: true,
     require: ['rectas sencillas', 'rectas dobles', 'sudaderas sencillas', 'sudaderas dobles'],
     requiremessage: 'Requiere poner arciones primero.',
     zindex: 37,
@@ -5807,6 +6065,7 @@ export const products = [
     portador: 'caballo',
     runway: 'armas-lanza.avif',
     zindex: 48,
+    allowsame: true,
     text: [
       'La lanza ya casi no se usa, y hasta en los desfiles ha sido erróneamente remplazada por la garrocha. En la parte media del asta lleva una tira de cuero llamada portalanza, para sujetarla al brazo cuando no se usa. Debajo de la punta o hierro suele llevar una banderola o gallardete.'
     ]
@@ -5819,9 +6078,9 @@ export const products = [
     portador: 'caballo',
     garrocha: 'cuja.avif',
     zindex: 6,
+    allowsame: true,
     text: [
       'La cuja es una pieza de cuero en forma de cilindro y que sirve para portar la garrocha, lanza o estandarte. Se suele atar en el estribo. Cuando no se cuenta con ella, el asta se puede apoyar en el pie, entre la punta y empeine.'
     ]
   }
 ];
-

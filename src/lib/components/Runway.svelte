@@ -28,7 +28,25 @@
 					draggable="false"
 				/>
 			{/if}
-			{#if item.extraimg}
+			<!-- {#if item.extraimg}
+				<img
+					src={`/img/runway/${options.portador}/${item.extraimg.archivo}`}
+					alt={`${item.variante} parte 2`}
+					style:z-index={item.extraimg.zindex}
+					draggable="false"
+				/>
+			{/if} -->
+			{#if item.extraimg && Array.isArray(item.extraimg)}
+				{#each item.extraimg as extraImg}
+					<img
+						src={`/img/runway/${options.portador}/${extraImg.archivo}`}
+						alt={`${item.variante} parte 2`}
+						style:z-index={extraImg.zindex}
+						draggable="false"
+					/>
+				{/each}
+			{:else if item.extraimg}
+				<!-- Handle the case where extraimg is a single object -->
 				<img
 					src={`/img/runway/${options.portador}/${item.extraimg.archivo}`}
 					alt={`${item.variante} parte 2`}
@@ -170,8 +188,10 @@
 		.frame-garrocha,
 		.frame-cabeza {
 			position: absolute;
-			height: auto;
-			width: 30%;
+			left: 5%;
+			bottom: 5%;
+			height: 50%;
+			width: auto;
 			background-color: var(--color-runway);
 			background-position: center;
 			background-size: contain;
@@ -183,14 +203,10 @@
 		}
 
 		.frame-garrocha {
-			top: 1em;
-			right: 5%;
 			background-image: url('/img/base-garrocha.avif');
 		}
 
 		.frame-cabeza {
-			top: 1em;
-			right: 5%;
 			background-image: url('/img/base-cabeza.avif');
 		}
 	}
@@ -252,6 +268,7 @@
 
 			.frame-front {
 				height: auto;
+				max-height: 100%;
 				width: 100%;
 			}
 		}

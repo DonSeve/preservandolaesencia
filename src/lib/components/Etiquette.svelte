@@ -1,21 +1,32 @@
 <script>
 	import { options } from '$lib/stores/shared.svelte.js';
+	import { browser } from '$app/environment';
+	import gsap from 'gsap';
 
 	const etiquetteList = ['faena', 'media gala', 'gala', 'gran gala', 'ceremonia'];
+	let currentIndex = $state(0);
+
+	function updateEtiquette(etiquette, index) {
+		gsap.to('#etiquetteSelected', { xPercent: index * 100 });
+		options.etiquette = etiquette;
+		currentIndex = index;
+	}
 </script>
 
 <div class="etiquette {options.portador === 'jinete' ? 'jinete' : 'caballo'}">
-	{#each etiquetteList as etiquette}
+	{#each etiquetteList as etiquette, index}
 		<button
-			class="item {options.etiquette === etiquette ? 'active' : ''}"
+			class="item"
 			onclick={(e) => {
-				e.preventDefault();
-				options.etiquette = etiquette;
+				updateEtiquette(etiquette, index);
 			}}
 		>
-			{etiquette}
+			<span>
+				{etiquette}
+			</span>
 		</button>
 	{/each}
+	<div id="etiquetteSelected" class="selected"></div>
 </div>
 
 <style lang="scss">
@@ -29,45 +40,36 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			gap: 2em;
 			height: 100%;
-			background-color: var(--color-menu);
-			padding: 0em 2em;
+			background-color: var(--color-page-bg);
 			border-radius: 50px;
 			left: 50%;
 			transform: translateX(-50%);
+			// border: solid var(--color-buttons) thin;
+			overflow: hidden;
+		}
+
+		.selected {
+			position: absolute;
+			top: 0;
+			left: 0em;
+			width: 7em;
+			height: 100%;
+			background-color: var(--color-buttons);
+			z-index: 1;
+			border-radius: 50px;
 		}
 
 		.item {
 			position: relative;
 			cursor: pointer;
+			width: 7em;
+			z-index: 2;
+			background-color: transparent;
+			mix-blend-mode: difference;
 
-			&.active {
-				font-weight: 700;
-			}
-
-			&:hover {
-				font-weight: 700;
-				transition: all 0.5s ease 50ms;
-
-				&::before {
-					transition: all 0.5s ease 50ms;
-					transform: scale(1);
-				}
-			}
-
-			&::before {
-				content: '';
-				position: absolute;
-				bottom: -0.25em;
-				left: 0;
-				width: 100%;
-				height: 1px;
-				border-radius: 50%;
-				transform: scale(0);
-				background-color: var(--color-text);
-				/* transform-origin: left; */
-				transition: all 0.5s ease 50ms;
+			span {
+				color: var(--color-page-bg);
 			}
 		}
 	}

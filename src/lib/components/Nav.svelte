@@ -5,9 +5,9 @@
 </script>
 
 <nav>
-	<div class="logo">
+	<a class="logo" href="https://www.preservandolaesencia.com/">
 		<img src="/img/logo.svg" alt="Preservando la esencia" />
-	</div>
+	</a>
 	<Etiquette />
 	<Portador />
 	<div class="burger">
@@ -50,6 +50,8 @@
 	@media screen and (min-width: 768px) {
 		nav {
 			/* border-bottom: solid orange thin; */
+			/* border: solid black thin; */
+			/* overflow: hidden; */
 		}
 
 		.burger {

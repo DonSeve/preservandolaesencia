@@ -30,7 +30,12 @@
 			{/if}
 		</div>
 		{#if current[options.portador].descLink}
-			<a class="link" href={current[options.portador].descLink}>link</a>
+			<a class="link" href={current[options.portador].descLink}>
+				<p>VER VIDEO</p>
+				<div class="icon">
+					<img src="/img/icons/arrow-diagonal.svg" alt="Flecha" />
+				</div>
+			</a>
 		{/if}
 	</div>
 </div>
@@ -44,6 +49,10 @@
 			margin-bottom: 1em;
 		}
 
+		.text {
+			font-family: var(--font-retro);
+		}
+
 		.block {
 			margin-top: 0.5em;
 		}
@@ -53,17 +62,49 @@
 			margin-top: 1.5em;
 			border-radius: var(--border-radius-light);
 			overflow: hidden;
+			display: flex;
+			justify-content: center;
 
 			img {
-				height: 100%;
-				width: 100%;
+				max-height: 100%;
+				max-width: 100%;
 				object-fit: contain;
 			}
 		}
 
 		.link {
+			position: relative;
 			margin-top: 1em;
-			display: block;
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5em;
+
+			&:hover {
+				.icon {
+					transform: rotate(45deg);
+				}
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: -0.25em;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background-color: var(--color-buttons);
+			}
+
+			.icon {
+				--size: 0.8em;
+				transition: 0.3s ease;
+
+				img {
+					height: var(--size);
+					width: var(--size);
+					object-fit: contain;
+				}
+			}
 		}
 	}
 

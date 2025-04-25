@@ -37,7 +37,8 @@
 			position: relative;
 			display: flex;
 			gap: 2em;
-			padding: 0.5em 1em;
+			padding: 0em 1em;
+			height: 100%;
 		}
 
 		button {

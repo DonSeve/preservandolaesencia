@@ -56,6 +56,10 @@ export function wearProduct(product) {
       if (sameSubcat && !item.allowsame) shouldRemove = true;
       if (sameCat && !item.allowsame) shouldRemove = true;
 
+      // Cuerno + Guante
+      if (product.variante === 'cuerno' && item.variante === 'guante') shouldRemove = false
+      if (product.variante === 'guante' && item.variante === 'cuerno') shouldRemove = false
+
       if (shouldRemove) {
         if (item.dependencies) {
           item.dependencies.forEach(dep => {
@@ -76,10 +80,12 @@ export function wearProduct(product) {
       (item) => !dependenciesToRemove.has(item.variante)
     );
 
+    outfit[options.portador].push(clone);
+
+    // Barbuquejo
     if (!options.barbuquejo) {
       current[options.portador] = clone // para InfoCol
     }
-    outfit[options.portador].push(clone);
     if (options.barbuquejo && options.portador === 'jinete' && clone.subcat && (clone.subcat == 'sombrero de palma' || clone.subcat === 'sombrero de fieltro' || clone.subcat === 'estilos antiguos')) {
       const barbuquejo = products.find((product) => product.variante == 'barbuquejo');
       outfit[options.portador].push(barbuquejo)
@@ -113,7 +119,15 @@ export function wearProduct(product) {
   } else {
     visible.frameCabeza = false
   }
-  // console.log('products.length: ', products.length)
+
+  // Reata
+  if (product.variante === 'reata') {
+    const cantinasExist = outfit[options.portador].some((item) =>
+      item.variante === 'cantinas redondas' ||
+      item.variante === 'cantinas cuadradas'
+    )
+    if (cantinasExist) visible.frameGarrocha = false
+  }
 }
 
 export function removeProduct(product) {

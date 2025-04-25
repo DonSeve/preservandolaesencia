@@ -302,7 +302,7 @@ export const subcats = [
   {
     "nombre": 'adornos',
     "portador": 'caballo',
-    "etiqueta": ['faena', 'media gala', 'gala', 'gran gala'],
+    "etiqueta": ['gala', 'gran gala'],
     "cat": 'cincho'
   },
   {
@@ -321,7 +321,8 @@ export const subcats = [
     "nombre": 'pecho y encuentro',
     "portador": 'caballo',
     "etiqueta": ['faena', 'media gala', 'gala', 'gran gala'],
-    "cat": 'aditamentos'
+    "cat": 'aditamentos',
+    "restrictedmessage": 'No se usa con gargantones de hilo.'
   },
   {
     "nombre": 'barrigueras',
