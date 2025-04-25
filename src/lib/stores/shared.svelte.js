@@ -15,8 +15,20 @@ export const options = $state({
 })
 
 export const outfit = $state({
-  jinete: [],
-  caballo: []
+  jinete: {
+    'faena': [],
+    'media gala': [],
+    'gala': [],
+    'gran gala': [],
+    'ceremonia': [],
+  },
+  caballo: {
+    'faena': [],
+    'media gala': [],
+    'gala': [],
+    'gran gala': [],
+    'ceremonia': [],
+  }
 })
 
 export const current = $state({

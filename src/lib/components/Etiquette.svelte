@@ -26,7 +26,7 @@
 			</span>
 		</button>
 	{/each}
-	<div id="etiquetteSelected" class="selected"></div>
+	<div id="etiquetteSelected" class="selected {options.etiquette == '' ? 'hidden' : ''}"></div>
 </div>
 
 <style lang="scss">
@@ -58,6 +58,10 @@
 			background-color: var(--color-buttons);
 			z-index: 1;
 			border-radius: 50px;
+
+			&.hidden {
+				opacity: 0;
+			}
 		}
 
 		.item {

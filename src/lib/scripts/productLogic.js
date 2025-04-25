@@ -4,7 +4,7 @@ import { subcats } from '$lib/stores/subcats.svelte';
 
 export function updateRunway(target) {
   if (target.version) {
-    const matchingItem = outfit[options.portador].find((item) => {
+    const matchingItem = outfit[options.portador][options.etiquette].find((item) => {
       return Object.keys(target.version).some((key) => item.variante == key);
     });
     if (matchingItem) {
@@ -28,7 +28,7 @@ export function wearProduct(product) {
   if (product.version) clone.runway = updateRunway(product);
 
   // Unicos
-  const exists = outfit[options.portador].some(
+  const exists = outfit[options.portador][options.etiquette].some(
     (item) =>
       item.variante === clone.variante &&
       item.cat === clone.cat &&
@@ -45,7 +45,7 @@ export function wearProduct(product) {
   } else {
     let dependenciesToRemove = new Set()
     // Filtrar + reunir dependencias
-    outfit[options.portador] = outfit[options.portador].filter((item) => {
+    outfit[options.portador][options.etiquette] = outfit[options.portador][options.etiquette].filter((item) => {
       let shouldRemove = false
       // condiciones
       const sameSubcat = product.subcat && item.subcat && item.subcat === product.subcat;
@@ -76,11 +76,11 @@ export function wearProduct(product) {
       return true;
     });
     // Quitar dependencias
-    outfit[options.portador] = outfit[options.portador].filter(
+    outfit[options.portador][options.etiquette] = outfit[options.portador][options.etiquette].filter(
       (item) => !dependenciesToRemove.has(item.variante)
     );
 
-    outfit[options.portador].push(clone);
+    outfit[options.portador][options.etiquette].push(clone);
 
     // Barbuquejo
     if (!options.barbuquejo) {
@@ -88,14 +88,13 @@ export function wearProduct(product) {
     }
     if (options.barbuquejo && options.portador === 'jinete' && clone.subcat && (clone.subcat == 'sombrero de palma' || clone.subcat === 'sombrero de fieltro' || clone.subcat === 'estilos antiguos')) {
       const barbuquejo = products.find((product) => product.variante == 'barbuquejo');
-      outfit[options.portador].push(barbuquejo)
-
+      outfit[options.portador][options.etiquette].push(barbuquejo)
     }
   }
 
   // MODIFY
   if (product.modify) {
-    const toBeModified = outfit[options.portador].filter((item) => {
+    const toBeModified = outfit[options.portador][options.etiquette].filter((item) => {
       return product.modify.includes(item.variante);
     });
     toBeModified.forEach((item) => (item.runway = updateRunway(item)));
@@ -122,12 +121,15 @@ export function wearProduct(product) {
 
   // Reata
   if (product.variante === 'reata') {
-    const cantinasExist = outfit[options.portador].some((item) =>
+    const cantinasExist = outfit[options.portador][options.etiquette].some((item) =>
       item.variante === 'cantinas redondas' ||
       item.variante === 'cantinas cuadradas'
     )
     if (cantinasExist) visible.frameGarrocha = false
   }
+
+  // console.log('product length: ', products.length)
+  // console.log('outfit: ', outfit)
 }
 
 export function removeProduct(product) {
@@ -137,7 +139,7 @@ export function removeProduct(product) {
   // imagen original para productos modificados
   if (product.modify) {
     product.modify.forEach((item) => {
-      outfit[options.portador].forEach((outfitItem) => {
+      outfit[options.portador][options.etiquette].forEach((outfitItem) => {
         if (item === outfitItem.variante) {
           const defaultRunway = findRunway(item);
           outfitItem.runway = defaultRunway;
@@ -149,12 +151,12 @@ export function removeProduct(product) {
   if (product.subcat) {
     const matchingSubcat = subcats.find((item) => item.nombre === product.subcat);
     if (matchingSubcat?.dependencies?.length) {
-      outfit[options.portador] = outfit[options.portador].filter((item) => !matchingSubcat.dependencies.includes(item.subcat))
+      outfit[options.portador][options.etiquette] = outfit[options.portador][options.etiquette].filter((item) => !matchingSubcat.dependencies.includes(item.subcat))
     }
   }
   // quitar dependencias a nivel individual
   if (product.dependencies) {
-    outfit[options.portador] = outfit[options.portador].filter((item) => !product.dependencies.includes(item.variante))
+    outfit[options.portador][options.etiquette] = outfit[options.portador][options.etiquette].filter((item) => !product.dependencies.includes(item.variante))
   }
 
   if (product.back) { visible.frameBack = false }
@@ -162,7 +164,7 @@ export function removeProduct(product) {
   if (product.cabeza) { visible.frameCabeza = false }
 
   // quitar producto
-  outfit[options.portador] = outfit[options.portador].filter(
+  outfit[options.portador][options.etiquette] = outfit[options.portador][options.etiquette].filter(
     (item) =>
       !(
         item.variante === product.variante &&

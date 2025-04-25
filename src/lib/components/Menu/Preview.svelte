@@ -13,13 +13,13 @@
 	etiquetteRestricted = product.etiqueta.includes(options.etiquette) ? false : true;
 
 	$effect(() => {
-		outfitted = outfit[options.portador].some(
+		outfitted = outfit[options.portador][options.etiquette].some(
 			(item) => item.variante === product.variante && item.subcat === product.subcat
 		);
 		// Require individual
 		disabled = product.require
 			? !product.require.some((req) =>
-					outfit[options.portador]?.some((item) => {
+					outfit[options.portador][options.etiquette]?.some((item) => {
 						return item.variante === req;
 					})
 				)
@@ -27,7 +27,7 @@
 		// Restricted individual
 		disabled = product.restricted
 			? product.restricted.some((req) =>
-					outfit[options.portador]?.some((item) => {
+					outfit[options.portador][options.etiquette]?.some((item) => {
 						restricted = true;
 						return item.variante === req;
 					})
@@ -47,8 +47,6 @@
 			visible.menu = false;
 		}
 	}
-
-	// console.log('products: ', products.length);
 </script>
 
 <button class="preview--item" aria-label={product.variante} onclick={handleProduct}>

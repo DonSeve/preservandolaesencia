@@ -5,8 +5,8 @@
 	import { fly } from 'svelte/transition';
 
 	function resetOutfit() {
-		outfit[options.portador] = [];
-		current[options.portador] = {};
+		outfit[options.portador][options.etiquette] = [];
+		current[options.portador][options.etiquette] = {};
 	}
 
 	function toggleMirror() {
@@ -19,7 +19,7 @@
 		{#if options.portador == 'jinete'}
 			<img src="/img/base-front.avif" alt="jinete" style:z-index={2} draggable="false" />
 		{/if}
-		{#each outfit[options.portador] as item}
+		{#each outfit[options.portador][options.etiquette] as item}
 			{#if item.runway}
 				<img
 					src={`/img/runway/${options.portador}/${item.runway}`}
@@ -28,14 +28,7 @@
 					draggable="false"
 				/>
 			{/if}
-			<!-- {#if item.extraimg}
-				<img
-					src={`/img/runway/${options.portador}/${item.extraimg.archivo}`}
-					alt={`${item.variante} parte 2`}
-					style:z-index={item.extraimg.zindex}
-					draggable="false"
-				/>
-			{/if} -->
+
 			{#if item.extraimg && Array.isArray(item.extraimg)}
 				{#each item.extraimg as extraImg}
 					<img
@@ -58,7 +51,7 @@
 
 		{#if visible.frameBack}
 			<div class="frame-back" transition:fly={{ delay: 50, duration: 300, x: 30 }}>
-				{#each outfit[options.portador] as item}
+				{#each outfit[options.portador][options.etiquette] as item}
 					{#if item.back}
 						<img
 							src={`/img/runway/${options.portador}/${item.back}`}
@@ -73,7 +66,7 @@
 
 		{#if visible.frameGarrocha}
 			<div class="frame-garrocha">
-				{#each outfit[options.portador] as item}
+				{#each outfit[options.portador][options.etiquette] as item}
 					{#if item.garrocha}
 						<img
 							src={`/img/runway/${options.portador}/garrocha/${item.garrocha}`}

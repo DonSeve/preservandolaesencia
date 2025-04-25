@@ -10,18 +10,20 @@
 	etiquetteRestricted = subcat.etiqueta.includes(options.etiquette) ? false : true;
 
 	$effect(() => {
-		outfitted = outfit[options.portador].some((item) => item.subcat === subcat.nombre);
+		outfitted = outfit[options.portador][options.etiquette].some(
+			(item) => item.subcat === subcat.nombre
+		);
 
 		// Evaluate disabled
 		if (!subcat.require) {
 			disabled = false;
 		} else {
-			disabled = !outfit[options.portador].some((item) => {
+			disabled = !outfit[options.portador][options.etiquette].some((item) => {
 				return subcat.require.includes(item.subcat);
 			});
 		}
 		// Evaluate restricted
-		restricted = outfit[options.portador].some((item) => {
+		restricted = outfit[options.portador][options.etiquette].some((item) => {
 			return (
 				subcat.restricted?.includes(item.subcat) ||
 				(item.restrictsubcat && item.restrictsubcat.includes(subcat.nombre))

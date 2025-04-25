@@ -17,6 +17,7 @@ export const products = [
   // dependencies: lista de productos que deben desaparecer junto con éste
   // zindex: z-index de runway
   // version: objeto con imágenes a usar por nuevo producto en presencia de otros (variante: archivo de imagen)
+  // allowsame: permite escoger el producto aunque ya se hayan escogido otros en su mismo grupo.
   // text: lista de parrafos para usar en <InfoCol/>
   // descImg: lista de imagenes para usar en <InfoCol/>
   // descLink: links para usar en <InfoCol/>
