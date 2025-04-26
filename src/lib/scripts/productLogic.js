@@ -40,7 +40,7 @@ export function wearProduct(product) {
     // Agregar producto si no existe
     if (!exists) {
       current[options.portador] = clone
-      outfit[options.portador].push(clone);
+      outfit[options.portador][options.etiquette].push(clone);
     }
   } else {
     let dependenciesToRemove = new Set()
@@ -127,9 +127,6 @@ export function wearProduct(product) {
     )
     if (cantinasExist) visible.frameGarrocha = false
   }
-
-  // console.log('product length: ', products.length)
-  // console.log('outfit: ', outfit)
 }
 
 export function removeProduct(product) {

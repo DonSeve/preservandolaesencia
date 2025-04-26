@@ -38,10 +38,12 @@
 
 <div class="subcat">
 	<button onclick={selectSubcat} disabled={disabled || restricted || etiquetteRestricted}>
-		{#if outfitted}
-			<div class="check"></div>
-		{/if}
 		<p class="subcat--name">{subcat.nombre}</p>
+		{#if outfitted}
+			<div class="check">
+				<img src="/img/icons/check_alt.svg" alt="Check" />
+			</div>
+		{/if}
 		<div class="icon">
 			<img src="/img/icons/caret_right.svg" alt="" />
 		</div>
@@ -57,17 +59,18 @@
 	</button>
 </div>
 
-<style>
+<style lang="scss">
 	.subcat {
 		width: 100%;
 
 		button {
 			position: relative;
 			display: flex;
-			justify-content: space-between;
+			// justify-content: space-between;
 			align-items: center;
 			width: 100%;
 			padding: 0.75em 0;
+			gap: 1em;
 
 			.subcat--name {
 				position: relative;
@@ -93,12 +96,18 @@
 			}
 
 			.check {
-				position: absolute;
-				top: 0;
-				left: -1em;
-				background-color: var(--color-text);
-				height: 100%;
-				width: 0.5em;
+				--height: 1.5em;
+				border-radius: 50%;
+				background-color: var(--color-buttons);
+				padding: 4px;
+				height: var(--height);
+				width: var(--height);
+
+				img {
+					object-fit: contain;
+					height: 100%;
+					width: 100%;
+				}
 			}
 
 			.message {
@@ -113,6 +122,7 @@
 
 			.icon {
 				opacity: 0.5;
+				margin-left: auto;
 			}
 
 			&:hover {

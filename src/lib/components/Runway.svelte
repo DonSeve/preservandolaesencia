@@ -43,6 +43,7 @@
 	<div class="logo {options.portador}">
 		<img src="/img/logo.svg" alt="Preservando la esencia" />
 	</div>
+	<p class="gala">{options.etiquette}</p>
 	<div class="frame-front">
 		{#if options.portador == 'jinete'}
 			<img src="/img/base-front.avif" alt="jinete" style:z-index={2} draggable="false" />
@@ -128,7 +129,7 @@
 	{#if options.portador === 'jinete'}
 		<RunwayBtn alt="Espejo" icon="/img/icons/mirror.svg" action={toggleMirror} x="left" />
 	{/if}
-	<RunwayBtn alt="Descargar" icon="/img/icons/mirror.svg" action={screenShot} x="left" y="top" />
+	<RunwayBtn alt="Descargar" icon="/img/icons/camera.svg" action={screenShot} x="left" y="top" />
 </div>
 
 <style lang="scss">
@@ -177,6 +178,14 @@
 			&.jinete {
 				width: 30%;
 			}
+		}
+
+		.gala {
+			position: absolute;
+			top: 1rem;
+			right: 1rem;
+			font-size: 2em;
+			font-family: var(--font-retro);
 		}
 	}
 
