@@ -6,6 +6,8 @@
 
 	let screenshotTarget;
 
+	let content = $state('hello');
+
 	function resetOutfit() {
 		outfit[options.portador][options.etiquette] = [];
 		current[options.portador] = {};
@@ -18,7 +20,9 @@
 	async function screenShot() {
 		// Prepare styles for screenshot
 		const logo = document.querySelector('.runway .logo');
+		const galaText = document.querySelector('.runway .gala');
 		logo.style.display = 'block';
+		galaText.style.display = 'block';
 		const runwayBtns = document.querySelectorAll('.runwayBtn');
 		runwayBtns.forEach((button) => {
 			button.style.display = 'none';
@@ -31,6 +35,7 @@
 			button.style.display = 'block';
 		});
 		logo.style.display = 'none';
+		galaText.style.display = 'none';
 		// Download image
 		const link = document.createElement('a');
 		link.href = image;
@@ -124,12 +129,30 @@
 	</div>
 
 	{#if outfit[options.portador][options.etiquette]?.length > 0}
-		<RunwayBtn alt="Reniciar" icon="/img/icons/reset.svg" action={resetOutfit} />
+		<RunwayBtn
+			alt="Reniciar"
+			icon="/img/icons/reset.svg"
+			action={resetOutfit}
+			tooltipContent="empezar de nuevo"
+		/>
 	{/if}
 	{#if options.portador === 'jinete'}
-		<RunwayBtn alt="Espejo" icon="/img/icons/mirror.svg" action={toggleMirror} x="left" />
+		<RunwayBtn
+			alt="Espejo"
+			icon="/img/icons/mirror.svg"
+			action={toggleMirror}
+			x="left"
+			tooltipContent="espejo"
+		/>
 	{/if}
-	<RunwayBtn alt="Descargar" icon="/img/icons/camera.svg" action={screenShot} x="left" y="top" />
+	<RunwayBtn
+		alt="Descargar"
+		icon="/img/icons/camera.svg"
+		action={screenShot}
+		x="left"
+		y="top"
+		tooltipContent="descarga la imagen"
+	/>
 </div>
 
 <style lang="scss">
@@ -181,6 +204,7 @@
 		}
 
 		.gala {
+			display: none;
 			position: absolute;
 			top: 1rem;
 			right: 1rem;

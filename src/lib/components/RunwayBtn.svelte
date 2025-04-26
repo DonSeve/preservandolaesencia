@@ -1,9 +1,23 @@
 <script>
 	import { outfit, options } from '$lib/stores/shared.svelte.js';
-	const { action, icon, alt, x = 'right', y = 'bottom' } = $props();
+	import tippy from 'tippy.js';
+	import 'tippy.js/dist/tippy.css'; // optional for styling
+	const { action, icon, alt, x = 'right', y = 'bottom', tooltipContent = null } = $props();
+
+	function tooltip(node, fn) {
+		$effect(() => {
+			const tooltip = tippy(node, fn());
+
+			return tooltip.destroy;
+		});
+	}
 </script>
 
-<button class="runwayBtn {x === 'left' ? 'left' : ''} {y === 'top' ? 'top' : ''}" onclick={action}>
+<button
+	class="runwayBtn {x === 'left' ? 'left' : ''} {y === 'top' ? 'top' : ''}"
+	onclick={action}
+	use:tooltip={() => ({ content: tooltipContent, delay: [1500, 250] })}
+>
 	<img src={icon} {alt} />
 </button>
 

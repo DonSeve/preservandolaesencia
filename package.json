@@ -30,6 +30,7 @@
 	},
 	"dependencies": {
 		"gsap": "file:gsap-bonus.tgz",
-		"html2canvas": "^1.4.1"
+		"html2canvas": "^1.4.1",
+		"tippy.js": "^6.3.7"
 	}
 }

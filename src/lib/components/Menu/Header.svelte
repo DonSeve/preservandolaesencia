@@ -4,7 +4,7 @@
 	import { wearProduct, removeProduct } from '$lib/scripts/productLogic';
 
 	function toggleBarbu() {
-		const sombrero = outfit[options.portador].some(
+		const sombrero = outfit[options.portador][options.etiquette].some(
 			(item) =>
 				item.subcat === 'sombrero de palma' ||
 				item.subcat == 'sombrero de fieltro' ||

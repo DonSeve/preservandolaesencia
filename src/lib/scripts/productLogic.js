@@ -127,6 +127,7 @@ export function wearProduct(product) {
     )
     if (cantinasExist) visible.frameGarrocha = false
   }
+
 }
 
 export function removeProduct(product) {
