@@ -82,10 +82,10 @@ export function wearProduct(product) {
 
     outfit[options.portador][options.etiquette].push(clone);
 
-    // Barbuquejo
-    if (!options.barbuquejo) {
+    if (product.variante !== 'barbuquejo') {
       current[options.portador] = clone // para InfoCol
     }
+    // Barbuquejo
     if (options.barbuquejo && options.portador === 'jinete' && clone.subcat && (clone.subcat == 'sombrero de palma' || clone.subcat === 'sombrero de fieltro' || clone.subcat === 'estilos antiguos')) {
       const barbuquejo = products.find((product) => product.variante == 'barbuquejo');
       outfit[options.portador][options.etiquette].push(barbuquejo)
