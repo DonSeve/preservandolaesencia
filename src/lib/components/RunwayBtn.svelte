@@ -23,7 +23,6 @@
 		will-change: transform;
 		z-index: 50;
 		padding: 0.7em;
-		/* padding: 0.5em; */
 
 		&.left {
 			right: auto;
@@ -40,7 +39,6 @@
 		}
 
 		img {
-			/* border: solid green thin; */
 			object-fit: contain;
 			height: 100%;
 			width: 100%;

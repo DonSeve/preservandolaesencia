@@ -1,15 +1,33 @@
 <script>
 	import { options } from '$lib/stores/shared.svelte';
 	import { fade } from 'svelte/transition';
+
+	import { gsap } from 'gsap';
+	import { Flip } from 'gsap/all';
+	import { tick } from 'svelte';
+	gsap.registerPlugin(Flip);
+
 	const portadores = ['jinete', 'caballo'];
+
+	async function togglePortador(nombre) {
+		const runwayImgs = gsap.utils.toArray('.runway img');
+		const state = Flip.getState(['.runway', '.hero']);
+
+		options.portador = nombre;
+
+		await tick();
+
+		Flip.from(state, {
+			absolute: true,
+			duration: 0.5
+		});
+	}
 </script>
 
 {#snippet button(nombre)}
 	<button
 		class={options.portador === nombre ? 'active' : ''}
-		onclick={() => {
-			options.portador = nombre;
-		}}
+		onclick={() => togglePortador(nombre)}
 	>
 		<p>{nombre}</p>
 	</button>

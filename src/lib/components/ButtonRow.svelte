@@ -119,7 +119,7 @@
 				gap: calc(var(--menu-btn-size) / 2);
 
 				&:first-of-type {
-					margin-top: -0.5em;
+					/* margin-top: -0.5em; */
 				}
 
 				&:hover {

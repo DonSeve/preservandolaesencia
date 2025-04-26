@@ -16,19 +16,34 @@
 	}
 
 	async function screenShot() {
-		console.log('screen shot: ', screenshotTarget);
+		// Prepare styles for screenshot
+		const logo = document.querySelector('.runway .logo');
+		logo.style.display = 'block';
+		const runwayBtns = document.querySelectorAll('.runwayBtn');
+		runwayBtns.forEach((button) => {
+			button.style.display = 'none';
+		});
+		// Screenshot
 		const canvas = await html2canvas(screenshotTarget);
 		const image = canvas.toDataURL('image/png');
-
+		// Restore styles
+		runwayBtns.forEach((button) => {
+			button.style.display = 'block';
+		});
+		logo.style.display = 'none';
+		// Download image
 		const link = document.createElement('a');
 		link.href = image;
-		link.download = 'charro.png';
+		link.download = `${options.portador} - ${options.etiquette}.png`;
 		link.click();
 	}
 </script>
 
-<div class="runway {options.portador}">
-	<div class="frame-front" bind:this={screenshotTarget}>
+<div class="runway {options.portador}" bind:this={screenshotTarget}>
+	<div class="logo {options.portador}">
+		<img src="/img/logo.svg" alt="Preservando la esencia" />
+	</div>
+	<div class="frame-front">
 		{#if options.portador == 'jinete'}
 			<img src="/img/base-front.avif" alt="jinete" style:z-index={2} draggable="false" />
 		{/if}
@@ -52,7 +67,6 @@
 					/>
 				{/each}
 			{:else if item.extraimg}
-				<!-- Handle the case where extraimg is a single object -->
 				<img
 					src={`/img/runway/${options.portador}/${item.extraimg.archivo}`}
 					alt={`${item.variante} parte 2`}
@@ -143,6 +157,27 @@
 				width: 100%;
 			}
 		}
+
+		.logo {
+			position: absolute;
+			display: none;
+			bottom: 1em;
+			left: 1em;
+			right: auto;
+			width: 25%;
+			height: auto;
+			z-index: 100;
+
+			img {
+				width: 100%;
+				height: auto;
+				object-fit: contain;
+			}
+
+			&.jinete {
+				width: 30%;
+			}
+		}
 	}
 
 	.jinete {
@@ -150,7 +185,7 @@
 		grid-column-start: 2;
 		grid-column: span 1;
 		grid-row-start: 2;
-		min-width: calc(100% - 4em);
+		// min-width: calc(100% - 4em);
 
 		.frame-front {
 			aspect-ratio: 1 / 2;
@@ -257,13 +292,6 @@
 				background-repeat: no-repeat;
 				border: solid var(--color-buttons) thin;
 				border-radius: var(--border-radius-light);
-				// opacity: 0;
-				transition: 0.3s ease;
-
-				&.visible {
-					// opacity: 1;
-					// transform: translateX(0);
-				}
 			}
 		}
 
