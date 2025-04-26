@@ -64,9 +64,10 @@ export const products = [
       'herradura 2',
       'media esfera de plata',
       'monograma',
-      'torito'
+      'torito',
+      'ribete'
     ],
-    dependencies: ['forro de sombrero', 'barbuquejo'],
+    dependencies: ['forro de sombrero', 'barbuquejo', 'ribete'],
     zindex: 26,
     text: [
       'La altura de la copa y el tipo de ala puede variar según el estilo deseado. El ancho del ala o falda debe ir en relación del ancho de los hombros. Aunque ahora no se permiten los sombreros de palma en suertes peligrosas, esto es un error: el sombrero, para defender bien la cabeza no tiene que forzosamente quedar indemne después de un golpe. Si se quiebra con el golpe, querrá decir que ya cumplió su función de proteger la cabeza al amortiguar el golpe y tendrá que ser remplazado, la misma lógica se utiliza con los cascos para bicicletas y motos.',
@@ -96,9 +97,10 @@ export const products = [
       'herradura 2',
       'media esfera de plata',
       'monograma',
-      'torito'
+      'torito',
+      'ribete'
     ],
-    dependencies: ['forro de sombrero', 'barbuquejo'],
+    dependencies: ['forro de sombrero', 'barbuquejo', 'ribete'],
     zindex: 26,
     text: [
       'La altura de la copa y el tipo de ala puede variar según el estilo deseado. El ancho del ala o falda debe ir en relación del ancho de los hombros. Aunque ahora no se permiten los sombreros de palma en suertes peligrosas, esto es un error: el sombrero, para defender bien la cabeza no tiene que forzosamente quedar indemne después de un golpe. Si se quiebra con el golpe, querrá decir que ya cumplió su función de proteger la cabeza al amortiguar el golpe y tendrá que ser remplazado, la misma lógica se utiliza con los cascos para bicicletas y motos.',
@@ -128,9 +130,10 @@ export const products = [
       'herradura 2',
       'media esfera de plata',
       'monograma',
-      'torito'
+      'torito',
+      'ribete'
     ],
-    dependencies: ['forro de sombrero', 'barbuquejo'],
+    dependencies: ['forro de sombrero', 'barbuquejo', 'ribete'],
     text: [
       'La altura de la copa y el tipo de ala puede variar según el estilo deseado. El ancho del ala o falda debe ir en relación del ancho de los hombros. Aunque ahora no se permiten los sombreros de palma en suertes peligrosas, esto es un error: el sombrero, para defender bien la cabeza no tiene que forzosamente quedar indemne después de un golpe. Si se quiebra con el golpe, querrá decir que ya cumplió su función de proteger la cabeza al amortiguar el golpe y tendrá que ser remplazado, la misma lógica se utiliza con los cascos para bicicletas y motos.',
       'La palma puede ser de distintos tipos y origenes, como: palma real, soyate, trigo, piña, etc. Entre más fina es la trenza de palma utilizada y por lo tanto más vueltas lleva, más fino será.'
@@ -160,9 +163,10 @@ export const products = [
       'herradura 2',
       'media esfera de plata',
       'monograma',
-      'torito'
+      'torito',
+      'ribete'
     ],
-    dependencies: ['forro de sombrero', 'barbuquejo'],
+    dependencies: ['forro de sombrero', 'barbuquejo', 'ribete'],
     zindex: 26,
     text: [
       'La altura de la copa y el tipo de ala puede variar según el estilo deseado. El ancho del ala o falda debe ir en relación del ancho de los hombros. Aunque ahora no se permiten los sombreros de palma en suertes peligrosas, esto es un error: el sombrero, para defender bien la cabeza no tiene que forzosamente quedar indemne después de un golpe. Si se quiebra con el golpe, querrá decir que ya cumplió su función de proteger la cabeza al amortiguar el golpe y tendrá que ser remplazado, la misma lógica se utiliza con los cascos para bicicletas y motos.',
@@ -192,9 +196,10 @@ export const products = [
       'herradura 2',
       'media esfera de plata',
       'monograma',
-      'torito'
+      'torito',
+      'ribete'
     ],
-    dependencies: ['forro de sombrero', 'barbuquejo'],
+    dependencies: ['forro de sombrero', 'barbuquejo', 'ribete'],
     zindex: 26,
     text: [
       'La altura de la copa y el tipo de ala puede variar según el estilo deseado. El ancho del ala o falda debe ir en relación del ancho de los hombros. Aunque ahora no se permiten los sombreros de palma en suertes peligrosas, esto es un error: el sombrero, para defender bien la cabeza no tiene que forzosamente quedar indemne después de un golpe. Si se quiebra con el golpe, querrá decir que ya cumplió su función de proteger la cabeza al amortiguar el golpe y tendrá que ser remplazado, la misma lógica se utiliza con los cascos para bicicletas y motos.',
@@ -224,9 +229,10 @@ export const products = [
       'herradura 2',
       'media esfera de plata',
       'monograma',
-      'torito'
+      'torito',
+      'ribete'
     ],
-    dependencies: ['forro de sombrero', 'barbuquejo'],
+    dependencies: ['forro de sombrero', 'barbuquejo', 'ribete'],
     zindex: 26,
     text: [
       'La altura de la copa y el tipo de ala puede variar según el estilo deseado. El ancho del ala o falda debe ir en relación del ancho de los hombros. Aunque ahora no se permiten los sombreros de palma en suertes peligrosas, esto es un error: el sombrero, para defender bien la cabeza no tiene que forzosamente quedar indemne después de un golpe. Si se quiebra con el golpe, querrá decir que ya cumplió su función de proteger la cabeza al amortiguar el golpe y tendrá que ser remplazado, la misma lógica se utiliza con los cascos para bicicletas y motos.',
@@ -256,9 +262,10 @@ export const products = [
       'herradura 2',
       'media esfera de plata',
       'monograma',
-      'torito'
+      'torito',
+      'ribete'
     ],
-    dependencies: ['forro de sombrero', 'barbuquejo'],
+    dependencies: ['forro de sombrero', 'barbuquejo', 'ribete'],
     zindex: 26,
     text: [
       'La altura de la copa y el tipo de ala puede variar según el estilo deseado. El ancho del ala o falda debe ir en relación del ancho de los hombros. Aunque ahora no se permiten los sombreros de palma en suertes peligrosas, esto es un error: el sombrero, para defender bien la cabeza no tiene que forzosamente quedar indemne después de un golpe. Si se quiebra con el golpe, querrá decir que ya cumplió su función de proteger la cabeza al amortiguar el golpe y tendrá que ser remplazado, la misma lógica se utiliza con los cascos para bicicletas y motos.',
@@ -288,9 +295,10 @@ export const products = [
       'herradura 2',
       'media esfera de plata',
       'monograma',
-      'torito'
+      'torito',
+      'ribete'
     ],
-    dependencies: ['forro de sombrero', 'barbuquejo'],
+    dependencies: ['forro de sombrero', 'barbuquejo', 'ribete'],
     zindex: 26,
     text: [
       'La altura de la copa y el tipo de ala puede variar según el estilo deseado. El ancho del ala o falda debe ir en relación del ancho de los hombros. Aunque ahora no se permiten los sombreros de palma en suertes peligrosas, esto es un error: el sombrero, para defender bien la cabeza no tiene que forzosamente quedar indemne después de un golpe. Si se quiebra con el golpe, querrá decir que ya cumplió su función de proteger la cabeza al amortiguar el golpe y tendrá que ser remplazado, la misma lógica se utiliza con los cascos para bicicletas y motos.',
@@ -320,9 +328,10 @@ export const products = [
       'herradura 2',
       'media esfera de plata',
       'monograma',
-      'torito'
+      'torito',
+      'ribete'
     ],
-    dependencies: ['forro de sombrero', 'barbuquejo'],
+    dependencies: ['forro de sombrero', 'barbuquejo', 'ribete'],
     zindex: 26,
     text: [
       'La altura de la copa y el tipo de ala puede variar según el estilo deseado. El ancho del ala o falda debe ir en relación del ancho de los hombros. Aunque ahora no se permiten los sombreros de palma en suertes peligrosas, esto es un error: el sombrero, para defender bien la cabeza no tiene que forzosamente quedar indemne después de un golpe. Si se quiebra con el golpe, querrá decir que ya cumplió su función de proteger la cabeza al amortiguar el golpe y tendrá que ser remplazado, la misma lógica se utiliza con los cascos para bicicletas y motos.',
@@ -355,9 +364,10 @@ export const products = [
       'herradura 2',
       'media esfera de plata',
       'monograma',
-      'torito'
+      'torito',
+      'ribete'
     ],
-    dependencies: ['forro de sombrero', 'barbuquejo'],
+    dependencies: ['forro de sombrero', 'barbuquejo', 'ribete'],
     zindex: 26,
     text: [
       'La altura de la copa y el tipo de ala puede variar según el estilo deseado. El ancho del ala o falda debe ir en relación del ancho de los hombros. El fieltro puede ser de diferentes materiales: lana, conejo, castor, nutria, etc. Siendo los más comunes actualmente los de lana y conejo.'
@@ -386,9 +396,10 @@ export const products = [
       'herradura 2',
       'media esfera de plata',
       'monograma',
-      'torito'
+      'torito',
+      'ribete'
     ],
-    dependencies: ['forro de sombrero', 'barbuquejo'],
+    dependencies: ['forro de sombrero', 'barbuquejo', 'ribete'],
     zindex: 26,
     text: [
       'La altura de la copa y el tipo de ala puede variar según el estilo deseado. El ancho del ala o falda debe ir en relación del ancho de los hombros. El fieltro puede ser de diferentes materiales: lana, conejo, castor, nutria, etc. Siendo los más comunes actualmente los de lana y conejo.'
@@ -417,9 +428,10 @@ export const products = [
       'herradura 2',
       'media esfera de plata',
       'monograma',
-      'torito'
+      'torito',
+      'ribete'
     ],
-    dependencies: ['forro de sombrero', 'barbuquejo'],
+    dependencies: ['forro de sombrero', 'barbuquejo', 'ribete'],
     zindex: 26,
     text: [
       'La altura de la copa y el tipo de ala puede variar según el estilo deseado. El ancho del ala o falda debe ir en relación del ancho de los hombros. El fieltro puede ser de diferentes materiales: lana, conejo, castor, nutria, etc. Siendo los más comunes actualmente los de lana y conejo.'
@@ -448,9 +460,10 @@ export const products = [
       'herradura 2',
       'media esfera de plata',
       'monograma',
-      'torito'
+      'torito',
+      'ribete'
     ],
-    dependencies: ['forro de sombrero', 'barbuquejo'],
+    dependencies: ['forro de sombrero', 'barbuquejo', 'ribete'],
     zindex: 26,
     text: [
       'La altura de la copa y el tipo de ala puede variar según el estilo deseado. El ancho del ala o falda debe ir en relación del ancho de los hombros. El fieltro puede ser de diferentes materiales: lana, conejo, castor, nutria, etc. Siendo los más comunes actualmente los de lana y conejo.'
@@ -479,9 +492,10 @@ export const products = [
       'herradura 2',
       'media esfera de plata',
       'monograma',
-      'torito'
+      'torito',
+      'ribete'
     ],
-    dependencies: ['forro de sombrero', 'barbuquejo'],
+    dependencies: ['forro de sombrero', 'barbuquejo', 'ribete'],
     zindex: 26,
     text: [
       'La altura de la copa y el tipo de ala puede variar según el estilo deseado. El ancho del ala o falda debe ir en relación del ancho de los hombros. El fieltro puede ser de diferentes materiales: lana, conejo, castor, nutria, etc. Siendo los más comunes actualmente los de lana y conejo.'
@@ -510,9 +524,10 @@ export const products = [
       'herradura 2',
       'media esfera de plata',
       'monograma',
-      'torito'
+      'torito',
+      'ribete'
     ],
-    dependencies: ['forro de sombrero', 'barbuquejo'],
+    dependencies: ['forro de sombrero', 'barbuquejo', 'ribete'],
     zindex: 26,
     text: [
       'La altura de la copa y el tipo de ala puede variar según el estilo deseado. El ancho del ala o falda debe ir en relación del ancho de los hombros. El fieltro puede ser de diferentes materiales: lana, conejo, castor, nutria, etc. Siendo los más comunes actualmente los de lana y conejo.'
@@ -541,9 +556,10 @@ export const products = [
       'herradura 2',
       'media esfera de plata',
       'monograma',
-      'torito'
+      'torito',
+      'ribete'
     ],
-    dependencies: ['forro de sombrero', 'barbuquejo'],
+    dependencies: ['forro de sombrero', 'barbuquejo', 'ribete'],
     zindex: 26,
     text: [
       'La altura de la copa y el tipo de ala puede variar según el estilo deseado. El ancho del ala o falda debe ir en relación del ancho de los hombros. El fieltro puede ser de diferentes materiales: lana, conejo, castor, nutria, etc. Siendo los más comunes actualmente los de lana y conejo.'
@@ -572,9 +588,10 @@ export const products = [
       'herradura 2',
       'media esfera de plata',
       'monograma',
-      'torito'
+      'torito',
+      'ribete'
     ],
-    dependencies: ['forro de sombrero', 'barbuquejo'],
+    dependencies: ['forro de sombrero', 'barbuquejo', 'ribete'],
     zindex: 26,
     text: [
       'La altura de la copa y el tipo de ala puede variar según el estilo deseado. El ancho del ala o falda debe ir en relación del ancho de los hombros. El fieltro puede ser de diferentes materiales: lana, conejo, castor, nutria, etc. Siendo los más comunes actualmente los de lana y conejo.'
@@ -603,9 +620,10 @@ export const products = [
       'herradura 2',
       'media esfera de plata',
       'monograma',
-      'torito'
+      'torito',
+      'ribete'
     ],
-    dependencies: ['forro de sombrero', 'barbuquejo'],
+    dependencies: ['forro de sombrero', 'barbuquejo', 'ribete'],
     zindex: 26,
     text: [
       'La altura de la copa y el tipo de ala puede variar según el estilo deseado. El ancho del ala o falda debe ir en relación del ancho de los hombros. El fieltro puede ser de diferentes materiales: lana, conejo, castor, nutria, etc. Siendo los más comunes actualmente los de lana y conejo.'
@@ -968,33 +986,29 @@ export const products = [
   // RIBETES
   // *****************************************
   {
-    variante: 'ribete A',
-    nombrecompleto: 'ribete A',
+    variante: 'ribete',
     cat: 'sombreros',
     subcat: 'ribetes',
     etiqueta: ['faena', 'media gala', 'gala', 'gran gala', 'ceremonia'],
     portador: 'jinete',
-    runway: 'ribetes-1.avif',
+    version: {
+      A1C1: 'ribetes-1.avif',
+      A1C2: 'ribetes-1.avif',
+      A1C3: 'ribetes-1.avif',
+      A2C1: 'ribetes-2.avif',
+      A2C2: 'ribetes-2.avif',
+      A2C3: 'ribetes-2.avif',
+      A3C1: 'ribetes-3.avif',
+      A3C2: 'ribetes-3.avif',
+      A3C3: 'ribetes-3.avif',
+    },
     replacecat: ['estilos antiguos'],
     zindex: 27,
     text: [
       'El material y adornos van de acuerdo con la categoría y generalmente haciendo juego con la toquilla, ejemplo: si la toquilla es de cuero piteado el ribete será de cuero y el piteado tendrá los mismos motivos que la toquilla. La parte ancha va en la parte inferior del ala y no por encima. Los ribetes de galón francés son para categoría de Gala en adelante.Los adornos aislados en el ribete no son correctos. La distancia máxima aproximada entre adornos separados entre sí no debe superar los 2cm.'
     ]
   },
-  {
-    variante: 'ribete B',
-    nombrecompleto: 'ribete B',
-    cat: 'sombreros',
-    subcat: 'ribetes',
-    etiqueta: ['faena', 'media gala', 'gala', 'gran gala', 'ceremonia'],
-    portador: 'jinete',
-    runway: 'ribetes-2.avif',
-    replacecat: ['estilos antiguos'],
-    zindex: 27,
-    text: [
-      'El material y adornos van de acuerdo con la categoría y generalmente haciendo juego con la toquilla, ejemplo: si la toquilla es de cuero piteado el ribete será de cuero y el piteado tendrá los mismos motivos que la toquilla. La parte ancha va en la parte inferior del ala y no por encima. Los ribetes de galón francés son para categoría de Gala en adelante.Los adornos aislados en el ribete no son correctos. La distancia máxima aproximada entre adornos separados entre sí no debe superar los 2cm.'
-    ]
-  },
+
 
   // *****************************************
   // ESTILO ANTIGUO

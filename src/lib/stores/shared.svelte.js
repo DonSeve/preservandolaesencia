@@ -14,6 +14,7 @@ export const options = $state({
   cat: '',
   subcat: '',
   barbuquejo: false,
+  ribete: false,
 })
 
 export const outfit = $state({
