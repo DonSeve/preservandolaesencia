@@ -2667,7 +2667,7 @@ export const products = [
     subcat: "refuerzos de pantalón",
     etiqueta: ['faena'],
     portador: "jinete",
-    back: 'refuerzos-calavera-liso.avif',
+    back: ['pantalon-back.avif', 'refuerzos-calavera-liso.avif',],
     require: ['pantalón liso'],
     requiremessage: 'Requiere un pantalón liso',
     allowsame: true,

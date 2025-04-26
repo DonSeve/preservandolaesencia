@@ -85,7 +85,16 @@
 		{#if visible.frameBack}
 			<div class="frame-back" transition:fly={{ delay: 50, duration: 300, x: 30 }}>
 				{#each outfit[options.portador][options.etiquette] as item}
-					{#if item.back}
+					{#if item.back && Array.isArray(item.back)}
+						{#each item.back as back}
+							<img
+								src={`/img/runway/${options.portador}/${back}`}
+								alt={item.variante}
+								style:z-index={item.zindex}
+								draggable="false"
+							/>
+						{/each}
+					{:else if item.back}
 						<img
 							src={`/img/runway/${options.portador}/${item.back}`}
 							alt={item.variante}
