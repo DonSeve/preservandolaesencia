@@ -2,7 +2,7 @@
 	import { outfit, options } from '$lib/stores/shared.svelte.js';
 	import tippy from 'tippy.js';
 	import 'tippy.js/dist/tippy.css'; // optional for styling
-	const { action, icon, alt, x = 'right', y = 'bottom', tooltipContent = null } = $props();
+	const { action, icon, alt, x = 'right', y = 'bottom', tooltipContent = null, text } = $props();
 
 	function tooltip(node, fn) {
 		$effect(() => {
@@ -18,7 +18,11 @@
 	onclick={action}
 	use:tooltip={() => ({ content: tooltipContent, delay: [1500, 250] })}
 >
-	<img src={icon} {alt} />
+	{#if icon}
+		<img src={icon} {alt} />
+	{:else if text}
+		<p>{text}</p>
+	{/if}
 </button>
 
 <style>
@@ -56,6 +60,12 @@
 			object-fit: contain;
 			height: 100%;
 			width: 100%;
+		}
+
+		p {
+			font-size: 1.25em;
+			font-weight: 700;
+			/* font-family: var(--font-retro); */
 		}
 	}
 </style>

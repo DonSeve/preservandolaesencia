@@ -48,12 +48,12 @@ export const subcats = [
     "require": ['sombrero de palma', 'sombrero de fieltro'],
     "requiremessage": "Requiere un sombrero de palma o fieltro."
   },
-  {
-    "nombre": 'estilos antiguos',
-    "portador": 'jinete',
-    "etiqueta": ['faena', 'media gala', 'gala', 'gran gala', 'ceremonia'],
-    "cat": 'sombreros'
-  },
+  // {
+  //   "nombre": 'estilos antiguos',
+  //   "portador": 'jinete',
+  //   "etiqueta": ['faena', 'media gala', 'gala', 'gran gala', 'ceremonia'],
+  //   "cat": 'sombreros'
+  // },
   {
     "nombre": 'chaquetillas y similares',
     "portador": 'jinete',
@@ -203,7 +203,8 @@ export const subcats = [
     "etiqueta": ['faena', 'media gala', 'gala', 'gran gala'],
     "cat": 'fustes',
     "require": ['tipo'],
-    "requiremessage": "Requiere elegir antes un TIPO de fuste."
+    "requiremessage": "Requiere elegir antes un TIPO de fuste.",
+    "restrictedmessage": "El fuste plateado ya incluye cabeza Zaldívar"
   },
 
   {

@@ -3,7 +3,7 @@
 
 {#snippet platform(name, icon, link)}
 	<li class="item">
-		<a href={link}>
+		<a href={link} target="_blank">
 			<img src={icon} alt={name} />
 		</a>
 	</li>

@@ -30,7 +30,7 @@
 			{/if}
 		</div>
 		{#if current[options.portador].descLink}
-			<a class="link" href={current[options.portador].descLink}>
+			<a class="link" href={current[options.portador].descLink} target="_blank">
 				<p>VER VIDEO</p>
 				<div class="icon">
 					<img src="/img/icons/arrow-diagonal.svg" alt="Flecha" />
@@ -78,6 +78,7 @@
 			display: inline-flex;
 			align-items: center;
 			gap: 0.5em;
+			margin-bottom: 2em;
 
 			&:hover {
 				.icon {
@@ -209,6 +210,10 @@
 					margin-top: 2em;
 				}
 			}
+		}
+
+		.link {
+			font-size: 1.25em;
 		}
 	}
 </style>

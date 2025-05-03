@@ -56,9 +56,13 @@ export function wearProduct(product) {
       if (sameSubcat && !item.allowsame) shouldRemove = true;
       if (sameCat && !item.allowsame) shouldRemove = true;
 
-      // Cuerno + Guante
-      if (product.variante === 'cuerno' && item.variante === 'guante') shouldRemove = false
-      if (product.variante === 'guante' && item.variante === 'cuerno') shouldRemove = false
+      // excepciones
+      // latigo || chicote
+      if (product.variante === 'látigo' && item.variante === 'chicote') shouldRemove = true
+      if (product.variante === 'chicote' && item.variante === 'látigo') shouldRemove = true
+      // espada || machete
+      if (product.variante === 'machete' && item.variante === 'sable') shouldRemove = true
+      if (product.variante === 'sable' && item.variante === 'machete') shouldRemove = true
 
       if (shouldRemove) {
         if (item.dependencies) {
@@ -119,13 +123,43 @@ export function wearProduct(product) {
     visible.frameCabeza = false
   }
 
-  // Reata
-  if (product.variante === 'reata') {
+  // Reata caballo
+  if (product.variante === 'reata' && options.portador === 'caballo') {
     const cantinasExist = outfit[options.portador][options.etiquette].some((item) =>
       item.variante === 'cantinas redondas' ||
       item.variante === 'cantinas cuadradas'
     )
     if (cantinasExist) visible.frameGarrocha = false
+
+    const chapetones = outfit[options.portador][options.etiquette].find((item) => item.variante === 'chapetones')
+    if (chapetones) {
+      chapetones.garrocha = ''
+    }
+  }
+
+  // chapetones
+  if (product.subcat === 'atrás de la teja' && options.portador === 'caballo') {
+    const chapetones = outfit[options.portador][options.etiquette].find((item) => item.variante === 'chapetones')
+    if (chapetones) {
+      chapetones.extraimg = chapetones.extraimg.filter(item => item.archivo !== 'tientos-saraperos.avif')
+    }
+  }
+  if (product.variante === 'chicote' || product.variante === 'látigo') {
+    const chapetones = outfit[options.portador][options.etiquette].find((item) => item.variante === 'chapetones')
+    if (chapetones) {
+      chapetones.extraimg = chapetones.extraimg.filter(item => item.archivo !== 'chapeton-atras-1.avif')
+    }
+  }
+
+  if (product.variante === 'ronzal al bozal' ||
+    product.variante === 'ronzal al cuello' ||
+    product.variante === 'falsarienda' ||
+    product.variante === 'falsarienda con freno' ||
+    product.variante === 'falsarienda con freno y riendas') {
+    const chapetones = outfit[options.portador][options.etiquette].find((item) => item.variante === 'chapetones')
+    if (chapetones) {
+      chapetones.runway = ''
+    }
   }
 
 }
@@ -161,6 +195,8 @@ export function removeProduct(product) {
   if (product.garrocha) { visible.frameGarrocha = false }
   if (product.cabeza) { visible.frameCabeza = false }
 
+
+
   // quitar producto
   outfit[options.portador][options.etiquette] = outfit[options.portador][options.etiquette].filter(
     (item) =>
@@ -170,4 +206,40 @@ export function removeProduct(product) {
         item.subcat === product.subcat
       )
   );
+
+  // Reata cabllo
+  if (product.variante === 'reata' && options.portador === 'caballo') {
+    const chapetones = outfit[options.portador][options.etiquette].find((item) => item.variante === 'chapetones')
+    if (chapetones) chapetones.garrocha = 'chapeton.avif'
+  }
+
+  // Chapetones
+  if (product.subcat === 'atrás de la teja') {
+    const chapetones = outfit[options.portador][options.etiquette].find((item) => item.variante === 'chapetones')
+    if (chapetones) {
+      const originalChapetones = products.find((item) => item.variante === 'chapetones' && item.portador === 'caballo')
+      const tientos = originalChapetones.extraimg.find((item) => item.archivo === 'tientos-saraperos.avif')
+      chapetones.extraimg.push(tientos)
+    }
+  }
+
+  if (product.variante === 'chicote' || product.variante === 'látigo') {
+    const chapetones = outfit[options.portador][options.etiquette].find((item) => item.variante === 'chapetones')
+    if (chapetones) {
+      const originalChapetones = products.find((item) => item.variante === 'chapetones' && item.portador === 'caballo')
+      const chapetonAtras1 = originalChapetones.extraimg.find((item) => item.archivo === 'chapeton-atras-1.avif')
+      chapetones.extraimg.push(chapetonAtras1)
+    }
+  }
+
+  if (product.variante === 'ronzal al bozal' ||
+    product.variante === 'ronzal al cuello' ||
+    product.variante === 'falsarienda' ||
+    product.variante === 'falsarienda con freno' ||
+    product.variante === 'falsarienda con freno y riendas') {
+    const chapetones = outfit[options.portador][options.etiquette].find((item) => item.variante === 'chapetones')
+    if (chapetones) {
+      chapetones.runway = 'chapeton-frente.avif'
+    }
+  }
 }

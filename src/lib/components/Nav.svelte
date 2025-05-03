@@ -5,7 +5,7 @@
 </script>
 
 <nav>
-	<a class="logo" href="https://www.preservandolaesencia.com/">
+	<a class="logo" href="https://www.preservandolaesencia.com/" target="_blank">
 		<img src="/img/logo.svg" alt="Preservando la esencia" />
 	</a>
 	<Etiquette />

@@ -1,7 +1,12 @@
 <script>
 	import html2canvas from 'html2canvas';
 	import RunwayBtn from '$lib/components/RunwayBtn.svelte';
+	// import Bar from '$lib/components/Bar.svelte';
 	import { visible, outfit, options, current } from '$lib/stores/shared.svelte';
+	import { examples } from '$lib/stores/examples.svelte';
+	import { products } from '$lib/stores/productos.svelte';
+	import { wearProduct } from '$lib/scripts/productLogic';
+
 	import { fly } from 'svelte/transition';
 
 	let screenshotTarget;
@@ -14,16 +19,24 @@
 	}
 
 	function toggleMirror() {
-		visible.frameBack = !visible.frameBack;
+		if (options.portador === 'jinete') {
+			visible.frameBack = !visible.frameBack;
+		} else {
+			visible.frameGarrocha = !visible.frameGarrocha;
+		}
 	}
 
 	async function screenShot() {
-		// Prepare styles for screenshot
 		const logo = document.querySelector('.runway .logo');
 		const galaText = document.querySelector('.runway .gala');
+		const frameBack = document.querySelector('.frame-back');
+		const examples = document.querySelector('.examples');
+		const runwayBtns = document.querySelectorAll('.runwayBtn');
+		// Prepare styles for screenshot
 		logo.style.display = 'block';
 		galaText.style.display = 'block';
-		const runwayBtns = document.querySelectorAll('.runwayBtn');
+		if (frameBack) frameBack.style.display = 'none';
+		examples.style.display = 'none';
 		runwayBtns.forEach((button) => {
 			button.style.display = 'none';
 		});
@@ -36,11 +49,33 @@
 		});
 		logo.style.display = 'none';
 		galaText.style.display = 'none';
+		if (frameBack) frameBack.style.display = 'block';
+		examples.style.display = 'block';
 		// Download image
 		const link = document.createElement('a');
 		link.href = image;
 		link.download = `${options.portador} - ${options.etiquette}.png`;
 		link.click();
+	}
+
+	function loadExample(sample) {
+		resetOutfit();
+		const example = examples[options.portador][options.etiquette].find(
+			(preset) => preset.nombre == sample
+		);
+		const exampleProducts = example.products.map((item) => {
+			const matchedProduct = products.find(
+				(product) =>
+					product.portador === options.portador &&
+					product.variante === item.variante &&
+					product.cat === item.cat &&
+					(!item.subcat || product.subcat === item.subcat)
+			);
+			return { ...item, ...matchedProduct };
+		});
+
+		exampleProducts.forEach((product) => wearProduct(product));
+		current[options.portador] = {};
 	}
 </script>
 
@@ -49,6 +84,8 @@
 		<img src="/img/logo.svg" alt="Preservando la esencia" />
 	</div>
 	<p class="gala">{options.etiquette}</p>
+	<!-- <Bar /> -->
+
 	<div class="frame-front">
 		{#if options.portador == 'jinete'}
 			<img src="/img/base-front.avif" alt="jinete" style:z-index={2} draggable="false" />
@@ -107,7 +144,7 @@
 		{/if}
 
 		{#if visible.frameGarrocha}
-			<div class="frame-garrocha">
+			<div class="frame-garrocha" transition:fly={{ delay: 50, duration: 300, x: 30 }}>
 				{#each outfit[options.portador][options.etiquette] as item}
 					{#if item.garrocha}
 						<img
@@ -135,17 +172,54 @@
 				{/each}
 			</div>
 		{/if}
+
+		{#if options.portador === 'caballo' && options.etiquette === 'ceremonia'}
+			<div class="ceretext">
+				<p>
+					Idealmente, el traje de ceremonia se reserva para eventos de tarde-noche donde se exige
+					vestimenta de máxima etiqueta (lo equivalente al Frac en el traje civil), por lo que no
+					debe usarse a caballo.
+				</p>
+				<p>
+					Las dos excepciones son los funerales (antes la gente iba muy bien vestida a los
+					funerales, pues eran eventos importantes que requerían mucha formalidad) y las bodas, ya
+					que antiguamente era común que se celebraran de noche y se exigiera a los invitados vestir
+					con la máxima etiqueta.
+				</p>
+				<p>
+					El traje de ceremonia equivale en formalidad al Frac civil, de ahí que sea negro y blanco.
+				</p>
+				<p>
+					En los casos donde se use este traje a caballo, la silla y arreos deberán corresponder
+					idealmente a la categoría Gran Gala, o a la que nuestros medios nos permitan (siempre
+					limpia, engrasada e impecable; sin arreos que no vayan de acuerdo con la ocasión:
+					protectores en las patas, bajadores, pechopretales, barrigueras, chaparreras, guantes,
+					vendas, etc.).
+				</p>
+				<p>
+					En nuestros días, si la boda es de día y no se exige Frac a los invitados civiles, los
+					charros pueden optar por usar un traje de Media Gala, Gala o Gran Gala, según la ocasión
+					(preferentemente en colores distintos al negro y blanco).
+				</p>
+
+				<a
+					href="http://www.preservandolaesencia.com/wp-content/uploads/2022/11/bodas-charras-traje-de-ceremonia.pdf"
+					target="_blank">Leer artículo</a
+				>
+			</div>
+		{/if}
 	</div>
 
-	{#if outfit[options.portador][options.etiquette]?.length > 0}
-		<RunwayBtn
-			alt="Reniciar"
-			icon="/img/icons/reset.svg"
-			action={resetOutfit}
-			tooltipContent="empezar de nuevo"
-		/>
-	{/if}
-	{#if options.portador === 'jinete'}
+	{#if !(options.portador === 'caballo' && options.etiquette === 'ceremonia')}
+		{#if outfit[options.portador][options.etiquette]?.length > 0}
+			<RunwayBtn
+				alt="Reniciar"
+				icon="/img/icons/reset.svg"
+				action={resetOutfit}
+				tooltipContent="empezar de nuevo"
+			/>
+		{/if}
+
 		<RunwayBtn
 			alt="Espejo"
 			icon="/img/icons/mirror.svg"
@@ -153,15 +227,35 @@
 			x="left"
 			tooltipContent="espejo"
 		/>
+
+		<RunwayBtn
+			alt="Descargar"
+			icon="/img/icons/camera.svg"
+			action={screenShot}
+			x="left"
+			y="top"
+			tooltipContent="descarga la imagen"
+		/>
+
+		<div class="examples">
+			<RunwayBtn
+				alt="ver ejemplo"
+				action={() => loadExample('1')}
+				y="top"
+				x="right"
+				tooltipContent="ver ejemplo 1"
+				text="1"
+			/>
+			<RunwayBtn
+				alt="ver ejemplo"
+				action={() => loadExample('2')}
+				y="bottom"
+				x="right"
+				text="2"
+				tooltipContent="ver ejemplo 2"
+			/>
+		</div>
 	{/if}
-	<RunwayBtn
-		alt="Descargar"
-		icon="/img/icons/camera.svg"
-		action={screenShot}
-		x="left"
-		y="top"
-		tooltipContent="descarga la imagen"
-	/>
 </div>
 
 <style lang="scss">
@@ -212,6 +306,44 @@
 			}
 		}
 
+		.examples {
+			position: absolute;
+			top: 0;
+			right: 0;
+			// border: solid red thin;
+			width: var(--menu-btn-size);
+			height: calc(var(--menu-btn-size) * 2 + 2em);
+
+			&::before {
+				content: 'ejemplos';
+				position: absolute;
+				top: 1em;
+				left: -2.5em;
+				writing-mode: vertical-lr;
+				transform: rotate(180deg);
+			}
+		}
+
+		.ceretext {
+			width: 100%;
+			background-color: var(--color-runway);
+			padding: 1em;
+
+			p {
+				max-width: 40em;
+				margin: 0 auto;
+				margin-bottom: 0.5em;
+			}
+
+			a {
+				display: block;
+				margin: 0 auto;
+				margin-top: 2em;
+				max-width: 40em;
+				text-decoration: underline;
+			}
+		}
+
 		.gala {
 			display: none;
 			position: absolute;
@@ -227,7 +359,6 @@
 		grid-column-start: 2;
 		grid-column: span 1;
 		grid-row-start: 2;
-		// min-width: calc(100% - 4em);
 
 		.frame-front {
 			aspect-ratio: 1 / 2;
@@ -246,7 +377,7 @@
 				background-image: url('/img/base-mano.avif');
 				background-position: center;
 				background-size: contain;
-				z-index: 13;
+				z-index: 15;
 			}
 		}
 
@@ -277,6 +408,7 @@
 			height: 50%;
 			width: auto;
 			background-color: var(--color-runway);
+			background-color: white;
 			background-position: center;
 			background-size: contain;
 			background-repeat: no-repeat;
@@ -348,6 +480,10 @@
 				max-height: 100%;
 				width: 100%;
 			}
+		}
+
+		.ceretext {
+			height: 100%;
 		}
 	}
 </style>
