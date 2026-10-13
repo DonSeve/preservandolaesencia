@@ -72,6 +72,7 @@
 			z-index: 2;
 			background-color: transparent;
 			mix-blend-mode: difference;
+			user-select: none;
 
 			span {
 				color: var(--color-page-bg);

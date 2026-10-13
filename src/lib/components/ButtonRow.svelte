@@ -46,7 +46,7 @@
 	{/if}
 </div>
 
-<style>
+<style lang="scss">
 	.intro {
 		display: none;
 	}
@@ -99,12 +99,14 @@
 
 			.row {
 				display: initial;
+				width: 100%;
 			}
 		}
 
 		.jinete,
 		.caballo {
 			padding: 0;
+			width: 100%;
 
 			.button {
 				position: relative;
@@ -115,7 +117,9 @@
 				font-family: var(--font-body);
 				padding: 0.5em 0;
 				margin: 0;
+				margin-bottom: 0.5em;
 				min-width: 15em;
+				max-width: 100%;
 				gap: calc(var(--menu-btn-size) / 2);
 
 				&:first-of-type {
@@ -144,11 +148,12 @@
 					display: initial;
 					transition: all 0.3s cubic-bezier(0.1, 0, 0.3, 1);
 					font-size: 1em;
+					// flex: 1;
 				}
 
 				.icon {
-					height: 100%;
-					width: auto;
+					height: var(--menu-btn-size);
+					width: var(--menu-btn-size);
 					transition: transform 0.2s cubic-bezier(0.1, 0, 0.3, 1);
 					will-change: transform;
 				}

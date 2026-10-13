@@ -279,7 +279,7 @@ export const subcats = [
   {
     "nombre": 'contralátigo',
     "portador": 'caballo',
-    "etiqueta": ['media gala', 'gala', 'gran gala'],
+    "etiqueta": ['faena', 'media gala', 'gala', 'gran gala'],
     "cat": 'cueraje'
   },
   {

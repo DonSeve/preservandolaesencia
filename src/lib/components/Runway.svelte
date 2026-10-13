@@ -312,7 +312,7 @@
 			right: 0;
 			// border: solid red thin;
 			width: var(--menu-btn-size);
-			height: calc(var(--menu-btn-size) * 2 + 2em);
+			height: calc(var(--menu-btn-size) * 2 + 2.5em);
 
 			&::before {
 				content: 'ejemplos';

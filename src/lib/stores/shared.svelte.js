@@ -45,3 +45,4 @@ export const windowSize = $state({
 })
 
 
+console.log(outfit)
